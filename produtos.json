@@ -1,122 +1,6 @@
 {
   "produtos": [
     {
-      "id": "BZ-001",
-      "nome": "Bolsa Riviera",
-      "categoria": "bolsas",
-      "badge": "hot",
-      "preco": "R$ 389–489",
-      "descricao": "Sofisticação e fluidez em couro de alta qualidade. Alça ajustável, compartimentos internos organizados e fechamento magnético premium. Do dia à noite com elegância.",
-      "imagem": "",
-      "cores": [
-        { "hex": "#C4A882", "nome": "Caramelo" },
-        { "hex": "#0B3A69", "nome": "Azul Marinho" },
-        { "hex": "#1A3A2A", "nome": "Verde Floresta" },
-        { "hex": "#8B1A1A", "nome": "Vinho" }
-      ]
-    },
-    {
-      "id": "BZ-002",
-      "nome": "Clutch Aurora",
-      "categoria": "clutch",
-      "badge": "new",
-      "preco": "R$ 219–259",
-      "descricao": "Veludo de alta qualidade, forro de seda e fechamento em dourado envelhecido. Perfeita para ocasiões especiais e eventos.",
-      "imagem": "",
-      "cores": [
-        { "hex": "#8B4A6B", "nome": "Rose Mauve" },
-        { "hex": "#0B3A69", "nome": "Azul Noite" },
-        { "hex": "#1C1C1C", "nome": "Preto" }
-      ]
-    },
-    {
-      "id": "BZ-003",
-      "nome": "Mochila Urban",
-      "categoria": "mochilas",
-      "badge": "new",
-      "preco": "R$ 289–349",
-      "descricao": "Funcionalidade encontra elegância. Espaçosa, com compartimentos organizados e acabamento premium. Do trabalho ao fim de semana.",
-      "imagem": "",
-      "cores": [
-        { "hex": "#C4A882", "nome": "Caramelo" },
-        { "hex": "#0B3A69", "nome": "Azul Marinho" },
-        { "hex": "#4A4A4A", "nome": "Cinza" }
-      ]
-    },
-    {
-      "id": "BZ-004",
-      "nome": "Carteira Slim",
-      "categoria": "carteiras",
-      "badge": "",
-      "preco": "R$ 129–169",
-      "descricao": "Carteira compacta em couro genuíno. 8 slots para cartões, compartimento para cédulas e fechamento zip interno.",
-      "imagem": "",
-      "cores": [
-        { "hex": "#C4A882", "nome": "Caramelo" },
-        { "hex": "#1C1C1C", "nome": "Preto" },
-        { "hex": "#8B1A1A", "nome": "Vinho" },
-        { "hex": "#0B3A69", "nome": "Azul Marinho" }
-      ]
-    },
-    {
-      "id": "BZ-005",
-      "nome": "Tote Premium",
-      "categoria": "bolsas",
-      "badge": "hot",
-      "preco": "R$ 259–319",
-      "descricao": "Ampla, elegante e funcional. A tote ideal para a mulher moderna que não abre mão do estilo no dia a dia.",
-      "imagem": "",
-      "cores": [
-        { "hex": "#1C1C1C", "nome": "Preto" },
-        { "hex": "#C4A882", "nome": "Caramelo" },
-        { "hex": "#0B3A69", "nome": "Azul Marinho" },
-        { "hex": "#4A4A4A", "nome": "Cinza" }
-      ]
-    },
-    {
-      "id": "BZ-006",
-      "nome": "Nécessaire Travel",
-      "categoria": "clutch",
-      "badge": "",
-      "preco": "R$ 89–139",
-      "descricao": "Kit com nécessaire grande e média. Fecho em zíper dourado e interior impermeável. Perfeita para viagens.",
-      "imagem": "",
-      "cores": [
-        { "hex": "#8B4A6B", "nome": "Rose" },
-        { "hex": "#1C1C1C", "nome": "Preto" },
-        { "hex": "#C4A882", "nome": "Bege" }
-      ]
-    },
-    {
-      "id": "BZ-007",
-      "nome": "Crossbody Mini",
-      "categoria": "bolsas",
-      "badge": "sale",
-      "preco": "R$ 179–229",
-      "descricao": "Pequena e de grande impacto. Alça transversal regulável e textura trabalhada exclusiva. Estilo para qualquer ocasião.",
-      "imagem": "",
-      "cores": [
-        { "hex": "#1C1C1C", "nome": "Preto" },
-        { "hex": "#8B1A1A", "nome": "Vinho" },
-        { "hex": "#8B4A6B", "nome": "Rose" },
-        { "hex": "#C4A882", "nome": "Caramelo" }
-      ]
-    },
-    {
-      "id": "BZ-008",
-      "nome": "Carteira Envelope",
-      "categoria": "carteiras",
-      "badge": "",
-      "preco": "R$ 149–189",
-      "descricao": "Estilo atemporal em couro macio. Sistema de cartões inteligente e bolso porta-moedas com zíper.",
-      "imagem": "",
-      "cores": [
-        { "hex": "#C4A882", "nome": "Caramelo" },
-        { "hex": "#1C1C1C", "nome": "Preto" },
-        { "hex": "#8B1A1A", "nome": "Vinho" }
-      ]
-    },
-    {
       "id": "BZ-009",
       "nome": "Bolsa Cora",
       "categoria": "bolsas",
@@ -124,6 +8,7 @@
       "preco": "R$ 120",
       "descricao": "Charme e praticidade em um só lugar. A Bolsa Cora combina design moderno com acabamento de qualidade, perfeita para o dia a dia.",
       "imagem": "",
+      "pagina": "bolsa-cora.html",
       "imagens": [
         "imagens/bolsa-cora-1.jpeg",
         "imagens/bolsa-cora-2.jpeg",
@@ -133,9 +18,9 @@
         "imagens/bolsa-cora-6.jpeg"
       ],
       "cores": [
-        { "hex": "#C4A882", "nome": "Caramelo" }
+        { "hex": "#C0392B", "nome": "Vermelho" }
       ]
     }
   ],
-  "maisVendidos": ["BZ-001", "BZ-005", "BZ-007", "BZ-004", "BZ-002"]
+  "maisVendidos": ["BZ-009"]
 }

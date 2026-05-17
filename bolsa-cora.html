@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Bolsa Cora — ZEIN Bolsas</title>
+<meta name="description" content="Bolsa Cora da ZEIN Bolsas. Design moderno, acabamento de qualidade. R$ 120. Atendimento via WhatsApp."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --navy:#0B3A69;--navy-d:#072B50;--navy-l:#14508F;
+  --blue:#486D98;--blue-l:#6E92BB;
+  --sky:#C8D9EE;--sky-lt:#EBF2FA;
+  --white:#FFFFFF;--off:#F7F9FC;
+  --g1:#EEF1F5;--g2:#CDD4DE;--g3:#8A96A8;--g4:#5A6475;
+  --black:#111827;--wa:#25D366;
+  --red:#C0392B;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+  --r:4px;--r-md:12px;--r-lg:20px;
+  --sh:0 2px 20px rgba(11,58,105,.08);
+  --sh-lg:0 8px 40px rgba(11,58,105,.14);
+  --t:all .25s ease;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);background:var(--white);color:var(--black);-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;color:inherit;}
+button{cursor:pointer;font-family:var(--sans);border:none;background:none;}
+
+/* ANNOUNCE */
+.ann{position:fixed;top:0;left:0;right:0;z-index:902;background:var(--navy);color:var(--white);text-align:center;padding:.6rem 1rem;font-size:.75rem;letter-spacing:.1em;font-weight:300;}
+.ann strong{font-weight:500;color:var(--sky);}
+
+/* HEADER */
+#hdr{position:fixed;top:36px;left:0;right:0;z-index:900;padding:0 5vw;transition:background .35s,box-shadow .35s;}
+#hdr.sc{background:rgba(255,255,255,.97);backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--g1);}
+.ni{max-width:1360px;margin:0 auto;height:64px;display:flex;align-items:center;justify-content:space-between;}
+.nback{display:flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--white);transition:color .2s;}
+.nback:hover{color:var(--sky);}
+.nback svg{width:16px;height:16px;}
+#hdr.sc .nback{color:var(--navy);}
+#hdr.sc .nback:hover{color:var(--blue);}
+.nlogo{font-family:var(--serif);font-size:1.4rem;color:var(--white);letter-spacing:.05em;}
+#hdr.sc .nlogo{color:var(--navy);}
+.nwa-btn{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:var(--white);padding:.4rem 1rem;border-radius:var(--r);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;transition:var(--t);}
+.nwa-btn:hover{background:rgba(255,255,255,.25);}
+#hdr.sc .nwa-btn{background:var(--navy);border-color:var(--navy);color:var(--white);}
+#hdr.sc .nwa-btn:hover{background:var(--navy-d);}
+
+/* MAIN */
+main{padding-top:110px;min-height:100vh;}
+
+/* BREADCRUMB */
+.bc{max-width:1200px;margin:0 auto;padding:1.5rem 5vw .5rem;font-size:.78rem;color:var(--g3);display:flex;align-items:center;gap:.5rem;}
+.bc a{color:var(--blue);transition:color .2s;}
+.bc a:hover{color:var(--navy);}
+.bc span{color:var(--g3);}
+
+/* PRODUTO */
+.prod-wrap{max-width:1200px;margin:0 auto;padding:1rem 5vw 5rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+
+/* GALERIA */
+.galeria{position:sticky;top:120px;}
+.main-foto{aspect-ratio:3/4;border-radius:var(--r-lg);overflow:hidden;background:var(--g1);position:relative;}
+.main-foto img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .35s;}
+.thumb-row{display:flex;gap:.6rem;margin-top:.85rem;flex-wrap:wrap;}
+.thumb{width:72px;aspect-ratio:1;border-radius:var(--r-md);overflow:hidden;cursor:pointer;border:2px solid transparent;transition:border-color .2s;flex-shrink:0;}
+.thumb.on{border-color:var(--navy);}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+
+/* INFOS */
+.infos{padding-top:.5rem;}
+.badge-new{display:inline-block;background:var(--navy);color:var(--white);font-size:.65rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;padding:.25rem .7rem;border-radius:var(--r);margin-bottom:1rem;}
+.prod-nome{font-family:var(--serif);font-size:clamp(2rem,3.5vw,2.8rem);color:var(--navy);line-height:1.1;margin-bottom:.5rem;}
+.prod-ref{font-size:.75rem;color:var(--g3);letter-spacing:.1em;margin-bottom:1.5rem;}
+.prod-preco{font-family:var(--serif);font-size:2.2rem;color:var(--navy);font-weight:500;margin-bottom:.4rem;}
+.prod-preco-sub{font-size:.82rem;color:var(--g3);margin-bottom:2rem;}
+.divider{width:40px;height:1px;background:var(--blue);margin:1.5rem 0;}
+.prod-desc{font-size:.95rem;color:var(--g4);line-height:1.85;margin-bottom:2rem;}
+
+/* COR */
+.cor-label{font-size:.75rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin-bottom:.75rem;}
+.cor-box{display:flex;align-items:center;gap:.75rem;margin-bottom:2rem;}
+.cor-swatch{width:28px;height:28px;border-radius:50%;border:3px solid var(--navy);box-shadow:0 0 0 2px white inset;}
+.cor-nome{font-size:.88rem;color:var(--g4);}
+
+/* BOTÕES */
+.bwa-full{display:flex;align-items:center;justify-content:center;gap:.6rem;width:100%;padding:1rem;background:var(--wa);color:var(--white);border-radius:var(--r);font-size:.85rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:var(--t);margin-bottom:.85rem;}
+.bwa-full:hover{background:#1ea855;transform:translateY(-1px);box-shadow:0 6px 24px rgba(37,211,102,.35);}
+.bwa-full svg{width:18px;height:18px;fill:currentColor;}
+.bcatalogo{display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;padding:.9rem;border:1px solid var(--navy);color:var(--navy);border-radius:var(--r);font-size:.82rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:var(--t);}
+.bcatalogo:hover{background:var(--navy);color:var(--white);}
+
+/* DETALHES */
+.det-titulo{font-size:.75rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--navy);margin:2rem 0 1rem;}
+.det-lista{list-style:none;display:flex;flex-direction:column;gap:.5rem;}
+.det-lista li{font-size:.88rem;color:var(--g4);padding-left:1rem;position:relative;}
+.det-lista li::before{content:'·';position:absolute;left:0;color:var(--blue);}
+
+/* MOBILE */
+@media(max-width:768px){
+  main{padding-top:100px;}
+  .prod-wrap{grid-template-columns:1fr;gap:2rem;}
+  .galeria{position:static;}
+  .thumb{width:60px;}
+}
+@media(max-width:480px){
+  .prod-wrap{padding:1rem 4vw 4rem;}
+  .prod-nome{font-size:1.8rem;}
+}
+</style>
+</head>
+<body>
+
+<div class="ann">✦ <strong>Novidades toda semana</strong> — Atendimento consultivo via WhatsApp ✦ Shopping Cidade &amp; Shopping Palladium ✦</div>
+
+<header id="hdr">
+  <nav class="ni">
+    <a href="index.html" class="nback">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Catálogo
+    </a>
+    <span class="nlogo">ZEIN</span>
+    <a href="https://wa.me/5541998114832?text=Olá!%20Tenho%20interesse%20na%20Bolsa%20Cora%20(BZ-009)%20na%20cor%20Vermelha.%20Pode%20me%20ajudar?%20💙" target="_blank" class="nwa-btn">WhatsApp</a>
+  </nav>
+</header>
+
+<main>
+  <div class="bc">
+    <a href="index.html">Catálogo</a>
+    <span>›</span>
+    <span>Bolsas</span>
+    <span>›</span>
+    <span>Bolsa Cora</span>
+  </div>
+
+  <div class="prod-wrap">
+
+    <!-- GALERIA -->
+    <div class="galeria">
+      <div class="main-foto">
+        <img id="foto-main" src="imagens/bolsa-cora-1.jpeg" alt="Bolsa Cora"/>
+      </div>
+      <div class="thumb-row">
+        <div class="thumb on" onclick="trocarFoto(0,this)"><img src="imagens/bolsa-cora-1.jpeg" alt="Foto 1"/></div>
+        <div class="thumb" onclick="trocarFoto(1,this)"><img src="imagens/bolsa-cora-2.jpeg" alt="Foto 2"/></div>
+        <div class="thumb" onclick="trocarFoto(2,this)"><img src="imagens/bolsa-cora-3.jpeg" alt="Foto 3"/></div>
+        <div class="thumb" onclick="trocarFoto(3,this)"><img src="imagens/bolsa-cora-4.jpeg" alt="Foto 4"/></div>
+        <div class="thumb" onclick="trocarFoto(4,this)"><img src="imagens/bolsa-cora-5.jpeg" alt="Foto 5"/></div>
+        <div class="thumb" onclick="trocarFoto(5,this)"><img src="imagens/bolsa-cora-6.jpeg" alt="Foto 6"/></div>
+      </div>
+    </div>
+
+    <!-- INFOS -->
+    <div class="infos">
+      <span class="badge-new">Novo</span>
+      <h1 class="prod-nome">Bolsa Cora</h1>
+      <p class="prod-ref">Ref. BZ-009</p>
+
+      <div class="prod-preco">R$ 120</div>
+      <div class="prod-preco-sub">Consulte condições de pagamento via WhatsApp</div>
+
+      <div class="divider"></div>
+
+      <p class="prod-desc">Charme e praticidade em um só lugar. A Bolsa Cora combina design moderno com acabamento de qualidade, perfeita para o dia a dia. Uma peça versátil que acompanha do trabalho ao passeio com elegância.</p>
+
+      <div class="cor-label">Cor disponível</div>
+      <div class="cor-box">
+        <div class="cor-swatch" style="background:#C0392B;"></div>
+        <span class="cor-nome">Vermelho</span>
+      </div>
+
+      <a href="https://wa.me/5541998114832?text=Olá!%20Tenho%20interesse%20na%20Bolsa%20Cora%20(BZ-009)%20na%20cor%20Vermelha.%20Pode%20me%20ajudar?%20💙" target="_blank" class="bwa-full">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.107 1.51 5.833L.057 23.215a.75.75 0 00.918.919l5.453-1.429A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.518-5.188-1.42l-.372-.22-3.862 1.013 1.04-3.771-.242-.389A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Consultar via WhatsApp
+      </a>
+
+      <a href="index.html#catalogo" class="bcatalogo">← Ver todo o catálogo</a>
+
+      <p class="det-titulo">Detalhes do produto</p>
+      <ul class="det-lista">
+        <li>Material: acabamento premium</li>
+        <li>Cor: Vermelho</li>
+        <li>Ref: BZ-009</li>
+        <li>Atendimento exclusivo via WhatsApp</li>
+        <li>Disponível nas lojas: Shopping Cidade & Shopping Palladium</li>
+      </ul>
+    </div>
+
+  </div>
+</main>
+
+<script>
+const fotos=[
+  'imagens/bolsa-cora-1.jpeg',
+  'imagens/bolsa-cora-2.jpeg',
+  'imagens/bolsa-cora-3.jpeg',
+  'imagens/bolsa-cora-4.jpeg',
+  'imagens/bolsa-cora-5.jpeg',
+  'imagens/bolsa-cora-6.jpeg'
+];
+function trocarFoto(idx,el){
+  document.getElementById('foto-main').src=fotos[idx];
+  document.querySelectorAll('.thumb').forEach(t=>t.classList.remove('on'));
+  el.classList.add('on');
+}
+function ajustarTopBar(){
+  const ann=document.querySelector('.ann');
+  const hdr=document.getElementById('hdr');
+  if(ann&&hdr)hdr.style.top=ann.offsetHeight+'px';
+}
+ajustarTopBar();
+window.addEventListener('resize',ajustarTopBar);
+window.addEventListener('scroll',()=>{
+  const annH=document.querySelector('.ann')?.offsetHeight||36;
+  document.getElementById('hdr').classList.toggle('sc',window.scrollY>annH+20);
+});
+</script>
+</body>
+</html>

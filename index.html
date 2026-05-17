@@ -661,6 +661,7 @@ function normalizarProduto(p){
     badge: p.badge,
     price: p.preco,
     desc: p.descricao,
+    pagina: p.pagina||'',
     imagens: imgs,
     colors: p.cores.map(c=>c.hex),
     cn: p.cores.map(c=>c.nome)
@@ -707,7 +708,10 @@ function pcHTML(p){
   } else {
     fotoHTML=`<div class="ph" style="height:100%"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(72,109,152,.3)" stroke-width=".8" style="width:32px;height:32px"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>`;
   }
-  return`<div class="pc" data-cat="${p.cat}"><div class="pci" style="position:relative;">${fotoHTML}${bd}<div class="pw"><svg viewBox="0 0 24 24" fill="none" stroke="#0B3A69" stroke-width="1.5" style="width:15px;height:15px"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div><div class="pq" onclick="openModal('${p.name}','${p.id}','${p.desc.replace(/'/g,"\\'")}','${p.price}',${JSON.stringify(p.colors)},${JSON.stringify(p.cn)});event.stopPropagation()">Ver detalhes</div></div><div class="pin"><div class="pnm">${p.name}</div><div class="psk">Ref. ${p.id}</div><div class="ppr">${p.price} <span>· Consulte condições</span></div><div class="cd" id="dots-${sid}">${dots}<span class="clb" id="cl-${sid}"> ${p.cn[0]}</span></div><button class="bwa bwaf" onclick="openWA('${p.name}','${p.id}',selC['${p.id}'],'Catálogo')">${waIco} Consultar disponibilidade</button></div></div>`;
+  return`<div class="pc" data-cat="${p.cat}"><div class="pci" style="position:relative;">${fotoHTML}${bd}<div class="pw"><svg viewBox="0 0 24 24" fill="none" stroke="#0B3A69" stroke-width="1.5" style="width:15px;height:15px"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>${p.pagina
+  ? `<a href="${p.pagina}" class="pq" style="display:block;">Ver detalhes</a>`
+  : `<div class="pq" onclick="openModal('${p.name}','${p.id}','${p.desc.replace(/'/g,"\\'")}','${p.price}',${JSON.stringify(p.colors)},${JSON.stringify(p.cn)});event.stopPropagation()">Ver detalhes</div>`
+}</div><div class="pin"><div class="pnm">${p.name}</div><div class="psk">Ref. ${p.id}</div><div class="ppr">${p.price} <span>· Consulte condições</span></div><div class="cd" id="dots-${sid}">${dots}<span class="clb" id="cl-${sid}"> ${p.cn[0]}</span></div><button class="bwa bwaf" onclick="openWA('${p.name}','${p.id}',selC['${p.id}'],'Catálogo')">${waIco} Consultar disponibilidade</button></div></div>`;
 }
 
 function pickC(pid,idx,el,e){
