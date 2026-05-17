@@ -257,6 +257,16 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1;}
 .igi::after{content:'';position:absolute;inset:0;background:rgba(11,58,105,.65);opacity:0;transition:opacity .3s;}
 .igi:hover::after{opacity:1;}
 
+/* CARROSSEL */
+.carousel{overflow:hidden;}
+.carr-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:10;background:rgba(255,255,255,.85);border:none;border-radius:50%;width:28px;height:28px;font-size:1.1rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;color:var(--navy);}
+.pci:hover .carr-btn{opacity:1;}
+.cprev{left:8px;}
+.cnext{right:8px;}
+.cdots{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:10;}
+.cdot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer;transition:background .2s;}
+.cdot.on{background:var(--white);}
+
 /* FAQ */
 .fql{max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:.65rem;}
 .fq{background:var(--white);border-radius:var(--r-md);border:1px solid var(--g1);overflow:hidden;transition:var(--t);}
@@ -643,6 +653,7 @@ let mC='';
 
 // Converte o formato do JSON para o formato interno usado pelo site
 function normalizarProduto(p){
+  const imgs = p.imagens && p.imagens.length ? p.imagens : (p.imagem ? [p.imagem] : []);
   return {
     id: p.id,
     name: p.nome,
@@ -650,7 +661,7 @@ function normalizarProduto(p){
     badge: p.badge,
     price: p.preco,
     desc: p.descricao,
-    imagem: p.imagem||'',
+    imagens: imgs,
     colors: p.cores.map(c=>c.hex),
     cn: p.cores.map(c=>c.nome)
   };
@@ -684,10 +695,19 @@ function pcHTML(p){
   const bd=p.badge?`<span class="pbdg b${p.badge[0]}">${p.badge==='new'?'Novo':p.badge==='hot'?'Em alta':'Promoção'}</span>`:'';
   const dots=p.colors.map((c,i)=>`<div class="dot${i===0?' on':''}" style="background:${c}" title="${p.cn[i]}" onclick="pickC('${p.id}',${i},this,event)"></div>`).join('');
   const sid=p.id.replace('-','');
-  const fotoHTML=p.imagem
-    ?`<img src="${p.imagem}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;display:block;">`
-    :`<div class="ph" style="height:100%"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(72,109,152,.3)" stroke-width=".8" style="width:32px;height:32px"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>`;
-  return`<div class="pc" data-cat="${p.cat}"><div class="pci">${fotoHTML}${bd}<div class="pw"><svg viewBox="0 0 24 24" fill="none" stroke="#0B3A69" stroke-width="1.5" style="width:15px;height:15px"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div><div class="pq" onclick="openModal('${p.name}','${p.id}','${p.desc.replace(/'/g,"\\'")}','${p.price}',${JSON.stringify(p.colors)},${JSON.stringify(p.cn)});event.stopPropagation()">Ver detalhes</div></div><div class="pin"><div class="pnm">${p.name}</div><div class="psk">Ref. ${p.id}</div><div class="ppr">${p.price} <span>· Consulte condições</span></div><div class="cd" id="dots-${sid}">${dots}<span class="clb" id="cl-${sid}"> ${p.cn[0]}</span></div><button class="bwa bwaf" onclick="openWA('${p.name}','${p.id}',selC['${p.id}'],'Catálogo')">${waIco} Consultar disponibilidade</button></div></div>`;
+  let fotoHTML;
+  if(p.imagens && p.imagens.length>0){
+    if(p.imagens.length===1){
+      fotoHTML=`<img src="${p.imagens[0]}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;display:block;">`;
+    } else {
+      const slides=p.imagens.map((src,i)=>`<img src="${src}" alt="${p.name} ${i+1}" class="cslide${i===0?' active':''}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:${i===0?1:0};transition:opacity .4s;">`).join('');
+      const cdots=p.imagens.map((_,i)=>`<span class="cdot${i===0?' on':''}" onclick="slideGo('${sid}',${i},event)"></span>`).join('');
+      fotoHTML=`<div class="carousel" id="car-${sid}" data-idx="0" style="position:absolute;inset:0;">${slides}<div class="ccontrols"><button class="carr-btn cprev" onclick="slidePrev('${sid}',${p.imagens.length},event)">&#8249;</button><button class="carr-btn cnext" onclick="slideNext('${sid}',${p.imagens.length},event)">&#8250;</button></div><div class="cdots">${cdots}</div></div>`;
+    }
+  } else {
+    fotoHTML=`<div class="ph" style="height:100%"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(72,109,152,.3)" stroke-width=".8" style="width:32px;height:32px"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>`;
+  }
+  return`<div class="pc" data-cat="${p.cat}"><div class="pci" style="position:relative;">${fotoHTML}${bd}<div class="pw"><svg viewBox="0 0 24 24" fill="none" stroke="#0B3A69" stroke-width="1.5" style="width:15px;height:15px"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div><div class="pq" onclick="openModal('${p.name}','${p.id}','${p.desc.replace(/'/g,"\\'")}','${p.price}',${JSON.stringify(p.colors)},${JSON.stringify(p.cn)});event.stopPropagation()">Ver detalhes</div></div><div class="pin"><div class="pnm">${p.name}</div><div class="psk">Ref. ${p.id}</div><div class="ppr">${p.price} <span>· Consulte condições</span></div><div class="cd" id="dots-${sid}">${dots}<span class="clb" id="cl-${sid}"> ${p.cn[0]}</span></div><button class="bwa bwaf" onclick="openWA('${p.name}','${p.id}',selC['${p.id}'],'Catálogo')">${waIco} Consultar disponibilidade</button></div></div>`;
 }
 
 function pickC(pid,idx,el,e){
@@ -742,6 +762,18 @@ function initRV(){
   const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});},{threshold:.1});
   document.querySelectorAll('.rv:not(.in)').forEach(el=>obs.observe(el));
 }
+
+function slideSet(sid,idx,total){
+  const car=document.getElementById('car-'+sid);if(!car)return;
+  const slides=car.querySelectorAll('.cslide');
+  const dots=car.querySelectorAll('.cdot');
+  slides.forEach((s,i)=>{s.style.opacity=i===idx?1:0;s.classList.toggle('active',i===idx);});
+  dots.forEach((d,i)=>d.classList.toggle('on',i===idx));
+  car.dataset.idx=idx;
+}
+function slideNext(sid,total,e){e&&e.stopPropagation();const car=document.getElementById('car-'+sid);if(!car)return;const idx=(+car.dataset.idx+1)%total;slideSet(sid,idx,total);}
+function slidePrev(sid,total,e){e&&e.stopPropagation();const car=document.getElementById('car-'+sid);if(!car)return;const idx=(+car.dataset.idx-1+total)%total;slideSet(sid,idx,total);}
+function slideGo(sid,idx,e){e&&e.stopPropagation();const car=document.getElementById('car-'+sid);if(!car)return;slideSet(sid,idx,car.querySelectorAll('.cslide').length);}
 
 document.addEventListener('DOMContentLoaded',()=>{carregarProdutos();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMod();});

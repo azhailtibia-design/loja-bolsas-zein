@@ -115,6 +115,26 @@
         { "hex": "#1C1C1C", "nome": "Preto" },
         { "hex": "#8B1A1A", "nome": "Vinho" }
       ]
+    },
+    {
+      "id": "BZ-009",
+      "nome": "Bolsa Cora",
+      "categoria": "bolsas",
+      "badge": "new",
+      "preco": "R$ 120",
+      "descricao": "Charme e praticidade em um só lugar. A Bolsa Cora combina design moderno com acabamento de qualidade, perfeita para o dia a dia.",
+      "imagem": "",
+      "imagens": [
+        "imagens/bolsa-cora-1.jpeg",
+        "imagens/bolsa-cora-2.jpeg",
+        "imagens/bolsa-cora-3.jpeg",
+        "imagens/bolsa-cora-4.jpeg",
+        "imagens/bolsa-cora-5.jpeg",
+        "imagens/bolsa-cora-6.jpeg"
+      ],
+      "cores": [
+        { "hex": "#C4A882", "nome": "Caramelo" }
+      ]
     }
   ],
   "maisVendidos": ["BZ-001", "BZ-005", "BZ-007", "BZ-004", "BZ-002"]
