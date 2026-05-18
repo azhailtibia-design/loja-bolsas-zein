@@ -145,6 +145,16 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1;}
 .lc-r{display:flex;flex-direction:column;gap:2px;}
 .lc-r .lc{flex:1;}
 
+/* LANÇAMENTO DESTAQUE */
+.lc-destaque{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;max-width:960px;margin:0 auto;}
+.lc-dest-main{aspect-ratio:3/4;border-radius:var(--r-lg);overflow:hidden;position:relative;background:var(--g1);}
+.lc-dest-thumbs{display:flex;gap:.5rem;margin-top:.65rem;flex-wrap:wrap;}
+.lc-dt{width:68px;aspect-ratio:1;border-radius:var(--r-md);overflow:hidden;cursor:pointer;border:2px solid transparent;transition:border-color .2s;flex-shrink:0;}
+.lc-dt.on{border-color:var(--navy);}
+.lc-dt img{width:100%;height:100%;object-fit:cover;display:block;}
+.lc-dest-info{padding:.5rem 0;}
+@media(max-width:768px){.lc-destaque{grid-template-columns:1fr;gap:2rem;}}
+
 /* PROD GRID */
 .fb{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:2.5rem;}
 .fbt{padding:.45rem 1.15rem;font-size:.72rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--g2);border-radius:var(--r);color:var(--g4);background:transparent;transition:var(--t);cursor:pointer;}
@@ -417,9 +427,12 @@ footer{background:var(--navy-d);color:var(--white);padding:4rem 5vw 2rem;}
   <div class="hr">
     <div class="hbg">
       <div class="hframe">
-        <!-- Substitua pelo: <img src="hero-bolsa.jpg" alt="Bolsa ZEIN destaque"> -->
-        <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="rgba(72,109,152,.35)" stroke-width=".8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-        <div class="hprice"><div class="hprice-l">a partir de</div><div class="hprice-v">R$ 189</div></div>
+        <img src="imagens/bolsa-cora-1.jpeg" alt="Bolsa Cora ZEIN" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
+        <div class="hprice">
+          <div class="hprice-l">Novidade da semana</div>
+          <div class="hprice-v">Bolsa Cora</div>
+          <div style="font-size:.78rem;color:#C0392B;font-weight:500;margin-top:.2rem;">R$ 120</div>
+        </div>
       </div>
     </div>
   </div>
@@ -443,22 +456,37 @@ footer{background:var(--navy-d);color:var(--white);padding:4rem 5vw 2rem;}
     <div class="dv"></div>
     <p class="ss">As peças mais aguardadas já estão disponíveis. Clique para consultar disponibilidade com nossa consultora.</p>
   </div>
-  <div class="lgrid rv">
-    <div class="lc" onclick="openModal('Bolsa Riviera','BZ-001','Sofisticação e fluidez em couro de alta qualidade. Alça ajustável, compartimentos internos organizados e fechamento magnético premium.','R$ 389–489',['#C4A882','#0B3A69','#1A3A2A','#8B1A1A'],['Caramelo','Azul Marinho','Verde Floresta','Vinho'])">
-      <div class="ph" style="height:100%"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width=".8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
-      <span class="lc-nb">Novo</span>
-      <div class="lc-ov"><div class="lc-nm">Bolsa Riviera</div><div class="lc-pr">A partir de R$ 389</div><div class="lc-ct">💬 Consultar disponibilidade →</div></div>
-    </div>
-    <div class="lc-r">
-      <div class="lc" onclick="openModal('Clutch Aurora','BZ-002','Veludo italiano de alta qualidade, forro de seda e fechamento dourado. Perfeita para ocasiões especiais.','R$ 219–259',['#8B4A6B','#0B3A69','#1C1C1C'],['Rose Mauve','Azul Noite','Preto'])">
-        <div class="ph" style="height:100%"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width=".8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div>
+  <div class="lc-destaque rv">
+    <div class="lc-dest-fotos">
+      <div class="lc-dest-main" id="dest-main">
+        <img src="imagens/bolsa-cora-1.jpeg" alt="Bolsa Cora" id="dest-img" style="width:100%;height:100%;object-fit:cover;display:block;transition:opacity .35s;">
         <span class="lc-nb">Novo</span>
-        <div class="lc-ov"><div class="lc-nm">Clutch Aurora</div><div class="lc-pr">A partir de R$ 219</div><div class="lc-ct">💬 Consultar →</div></div>
       </div>
-      <div class="lc" onclick="openModal('Mochila Urban','BZ-003','Funcionalidade e estilo. Espaçosa com compartimentos organizados e acabamento premium.','R$ 289–349',['#C4A882','#0B3A69','#4A4A4A'],['Caramelo','Azul Marinho','Cinza'])">
-        <div class="ph" style="height:100%"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width=".8"><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><path d="M5 7h14l1 12H4L5 7z"/></svg></div>
-        <span class="lc-nb">Novo</span>
-        <div class="lc-ov"><div class="lc-nm">Mochila Urban</div><div class="lc-pr">A partir de R$ 289</div><div class="lc-ct">💬 Consultar →</div></div>
+      <div class="lc-dest-thumbs">
+        <div class="lc-dt on" onclick="destFoto(0,this)"><img src="imagens/bolsa-cora-1.jpeg" alt="1"></div>
+        <div class="lc-dt" onclick="destFoto(1,this)"><img src="imagens/bolsa-cora-2.jpeg" alt="2"></div>
+        <div class="lc-dt" onclick="destFoto(2,this)"><img src="imagens/bolsa-cora-3.jpeg" alt="3"></div>
+        <div class="lc-dt" onclick="destFoto(3,this)"><img src="imagens/bolsa-cora-4.jpeg" alt="4"></div>
+        <div class="lc-dt" onclick="destFoto(4,this)"><img src="imagens/bolsa-cora-5.jpeg" alt="5"></div>
+        <div class="lc-dt" onclick="destFoto(5,this)"><img src="imagens/bolsa-cora-6.jpeg" alt="6"></div>
+      </div>
+    </div>
+    <div class="lc-dest-info">
+      <span class="ey">Chegou agora</span>
+      <h3 style="font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.4rem);color:var(--navy);font-weight:400;line-height:1.1;margin-bottom:.75rem;">Bolsa Cora</h3>
+      <div class="dv"></div>
+      <p style="font-size:.95rem;color:var(--g4);line-height:1.85;margin-bottom:1.5rem;">Charme e praticidade em um só lugar. A Bolsa Cora combina design moderno com acabamento de qualidade, perfeita para o dia a dia.</p>
+      <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.5rem;">
+        <div style="width:22px;height:22px;border-radius:50%;background:#C0392B;border:2px solid var(--navy);"></div>
+        <span style="font-size:.85rem;color:var(--g4);">Vermelho</span>
+      </div>
+      <div style="font-family:var(--serif);font-size:2rem;color:var(--navy);font-weight:500;margin:1rem 0 1.5rem;">R$ 120</div>
+      <div style="display:flex;gap:.85rem;flex-wrap:wrap;">
+        <a href="bolsa-cora.html" class="btn b-navy">Ver detalhes</a>
+        <a href="https://wa.me/5541998114832?text=Olá!%20Tenho%20interesse%20na%20Bolsa%20Cora%20(BZ-009)%20na%20cor%20Vermelha.%20Pode%20me%20ajudar?%20💙" target="_blank" class="bwa">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+          Consultar
+        </a>
       </div>
     </div>
   </div>
@@ -765,6 +793,13 @@ function dismissBubble(e){e.stopPropagation();dismissed=true;document.getElement
 function initRV(){
   const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});},{threshold:.1});
   document.querySelectorAll('.rv:not(.in)').forEach(el=>obs.observe(el));
+}
+
+const destFotos=['imagens/bolsa-cora-1.jpeg','imagens/bolsa-cora-2.jpeg','imagens/bolsa-cora-3.jpeg','imagens/bolsa-cora-4.jpeg','imagens/bolsa-cora-5.jpeg','imagens/bolsa-cora-6.jpeg'];
+function destFoto(idx,el){
+  document.getElementById('dest-img').src=destFotos[idx];
+  document.querySelectorAll('.lc-dt').forEach(t=>t.classList.remove('on'));
+  el.classList.add('on');
 }
 
 function slideSet(sid,idx,total){
