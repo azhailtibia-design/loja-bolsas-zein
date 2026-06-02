@@ -128,10 +128,11 @@ footer{background:var(--navy);color:var(--white);text-align:center;padding:2rem 
   <div class="prod-wrap">
     <div class="galeria">
       <div class="main-foto">
-        <img id="foto-main" src="Coleção dia dos namorados/bere1.jpg" alt="Bolsa Verona"/>
+        <img id="foto-main" src="Coleção dia dos namorados/bere5modelo.jpg" alt="Bolsa Verona"/>
       </div>
       <div class="thumb-row">
-        <div class="thumb on" onclick="trocarFoto(0,this)"><img src="Coleção dia dos namorados/bere1.jpg" alt="1"></div>
+        <div class="thumb on" onclick="trocarFoto(0,this)"><img src="Coleção dia dos namorados/bere5modelo.jpg" alt="1"></div>
+        <div class="thumb" onclick="trocarFoto(1,this)"><img src="Coleção dia dos namorados/bere1.jpg" alt="2"></div>
       </div>
     </div>
 
@@ -174,7 +175,7 @@ footer{background:var(--navy);color:var(--white);text-align:center;padding:2rem 
       <div class="rel-info"><div class="rel-nome">Bolsa Firenze</div><div class="rel-preco">R$ 199,90</div></div>
     </a>
     <a href="bolsa-toscana.html" class="rel-card">
-      <div class="rel-img"><img src="Coleção dia dos namorados/bere5modelo.jpg" alt="Bolsa Toscana" loading="lazy"></div>
+      <div class="rel-img"><img src="Coleção dia dos namorados/berem5branca.jpg" alt="Bolsa Toscana" loading="lazy"></div>
       <div class="rel-info"><div class="rel-nome">Bolsa Toscana</div><div class="rel-preco">R$ 149,90</div></div>
     </a>
   </div>
@@ -184,7 +185,7 @@ footer{background:var(--navy);color:var(--white);text-align:center;padding:2rem 
 <footer>© 2025 ZEIN Bolsas · Curitiba — Shopping Cidade & Shopping Palladium</footer>
 
 <script>
-const fotos=['Coleção dia dos namorados/bere1.jpg'];
+const fotos=['Coleção dia dos namorados/bere5modelo.jpg','Coleção dia dos namorados/bere1.jpg'];
 function trocarFoto(idx,el){
   document.getElementById('foto-main').src=fotos[idx];
   document.querySelectorAll('.thumb').forEach(t=>t.classList.remove('on'));

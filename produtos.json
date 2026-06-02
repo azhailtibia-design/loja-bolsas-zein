@@ -10,6 +10,7 @@
       "descricao": "Elegância italiana em cada detalhe. A Bolsa Verona é a escolha perfeita para quem deseja sofisticação no dia a dia.",
       "pagina": "bolsa-verona.html",
       "imagens": [
+        "Coleção dia dos namorados/bere5modelo.jpg",
         "Coleção dia dos namorados/bere1.jpg"
       ],
       "cores": [
@@ -82,7 +83,6 @@
       "descricao": "Inspirada nas colinas da Toscana, esta bolsa traz a beleza e serenidade italiana para o seu dia a dia com estilo.",
       "pagina": "bolsa-toscana.html",
       "imagens": [
-        "Coleção dia dos namorados/bere5modelo.jpg",
         "Coleção dia dos namorados/berem5branca.jpg",
         "Coleção dia dos namorados/berem5preta.jpg",
         "Coleção dia dos namorados/berem5café.jpg",
@@ -118,21 +118,21 @@
     },
     {
       "id": "BZ-007",
-      "nome": "Bag Aurora",
+      "nome": "Bag Dante",
       "codigo": "bag1",
       "categoria": "bolsas",
       "badge": "Mais Procurada",
       "preco": "R$ 129,90",
-      "descricao": "Espaçosa e elegante. A Bag Aurora tem capacidade para o seu dia inteiro sem abrir mão do estilo e da sofisticação.",
-      "pagina": "bag-aurora.html",
+      "descricao": "Espaçosa e elegante. A Bag Dante tem capacidade para o seu dia inteiro sem abrir mão do estilo e da sofisticação.",
+      "pagina": "bag-dante.html",
       "imagens": [
-        "Coleção dia dos namorados/bag1.jpg",
         "Coleção dia dos namorados/bag1preta.jpg",
         "Coleção dia dos namorados/bag1verde.jpg",
         "Coleção dia dos namorados/bag1tras.jpg",
         "Coleção dia dos namorados/bag1dentro.jpg",
         "Coleção dia dos namorados/bag1lado.jpg",
-        "Coleção dia dos namorados/bag1usando.jpg"
+        "Coleção dia dos namorados/bag1usando.jpg",
+        "Coleção dia dos namorados/bag1.jpg"
       ],
       "cores": [
         { "hex": "#1C1C1C", "nome": "Preto" },
@@ -141,17 +141,17 @@
     },
     {
       "id": "BZ-008",
-      "nome": "Bag Luna",
+      "nome": "Bag Marco",
       "codigo": "bag2",
       "categoria": "bolsas",
       "badge": "Presente Ideal",
       "preco": "R$ 99,90",
-      "descricao": "Delicada e sofisticada como o luar. A Bag Luna é o acessório que completa qualquer look com perfeição e leveza.",
-      "pagina": "bag-luna.html",
+      "descricao": "Delicado e sofisticado. A Bag Marco é o acessório que completa qualquer look com perfeição e leveza.",
+      "pagina": "bag-marco.html",
       "imagens": [
-        "Coleção dia dos namorados/bag2.jpg",
         "Coleção dia dos namorados/bag2dentro.jpg",
-        "Coleção dia dos namorados/bag2detalhe.jpg"
+        "Coleção dia dos namorados/bag2detalhe.jpg",
+        "Coleção dia dos namorados/bag2.jpg"
       ],
       "cores": [
         { "hex": "#C4A882", "nome": "Natural" }
