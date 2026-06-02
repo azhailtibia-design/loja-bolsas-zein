@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bag Luna — Coleção Dia dos Namorados | ZEIN Bolsas</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B3A69;--navy-d:#072B50;--navy-l:#14508F;
+  --blue:#486D98;--blue-l:#6E92BB;
+  --sky:#C8D9EE;--sky-lt:#EBF2FA;
+  --rose:#8B1A3A;--rose-l:#F9EEF1;
+  --white:#FFFFFF;--off:#F7F9FC;
+  --g1:#EEF1F5;--g2:#CDD4DE;--g3:#8A96A8;--g4:#5A6475;
+  --black:#111827;--wa:#25D366;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+  --r:4px;--r-md:12px;--r-lg:20px;
+  --sh:0 2px 20px rgba(11,58,105,.08);
+  --sh-lg:0 8px 40px rgba(11,58,105,.14);
+  --t:all .25s ease;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);background:var(--white);color:var(--black);-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;color:inherit;}
+button{cursor:pointer;font-family:var(--sans);border:none;background:none;}
+.ann{position:fixed;top:0;left:0;right:0;z-index:902;background:var(--navy);color:var(--white);text-align:center;padding:.6rem 1rem;font-size:.75rem;letter-spacing:.1em;font-weight:300;}
+.ann strong{font-weight:500;color:var(--sky);}
+#hdr{position:fixed;top:36px;left:0;right:0;z-index:900;padding:0 5vw;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--g1);}
+.ni{max-width:1360px;margin:0 auto;height:64px;display:flex;align-items:center;justify-content:space-between;}
+.nback{display:flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);transition:color .2s;}
+.nback:hover{color:var(--blue);}
+.nback svg{width:16px;height:16px;}
+.nlogo{font-family:var(--serif);font-size:1.4rem;color:var(--navy);letter-spacing:.05em;}
+.nwa-btn{background:var(--navy);border:none;color:var(--white);padding:.4rem 1.1rem;border-radius:var(--r);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;transition:var(--t);cursor:pointer;}
+.nwa-btn:hover{background:var(--navy-d);}
+main{padding-top:110px;min-height:100vh;}
+.bc{max-width:1200px;margin:0 auto;padding:1.5rem 5vw .5rem;font-size:.78rem;color:var(--g3);display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;}
+.bc a{color:var(--blue);transition:color .2s;}
+.bc a:hover{color:var(--navy);}
+.prod-wrap{max-width:1200px;margin:0 auto;padding:1rem 5vw 5rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+.galeria{position:sticky;top:120px;}
+.main-foto{aspect-ratio:3/4;border-radius:var(--r-lg);overflow:hidden;background:var(--g1);position:relative;}
+.main-foto img{width:100%;height:100%;object-fit:cover;display:block;}
+.thumb-row{display:flex;gap:.6rem;margin-top:.85rem;flex-wrap:wrap;}
+.thumb{width:72px;aspect-ratio:1;border-radius:var(--r-md);overflow:hidden;cursor:pointer;border:2px solid transparent;transition:border-color .2s;flex-shrink:0;}
+.thumb.on{border-color:var(--navy);}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+.infos{padding-top:.5rem;}
+.badge{display:inline-block;background:var(--navy);color:var(--white);font-size:.65rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;padding:.28rem .8rem;border-radius:var(--r);margin-bottom:1rem;}
+.badge.rose{background:var(--rose);}
+.prod-nome{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--navy);line-height:1.1;margin-bottom:.4rem;}
+.prod-ref{font-size:.75rem;color:var(--g3);letter-spacing:.1em;margin-bottom:1.5rem;}
+.prod-preco{font-family:var(--serif);font-size:2.2rem;color:var(--navy);font-weight:500;margin-bottom:.3rem;}
+.prod-preco-sub{font-size:.82rem;color:var(--g3);margin-bottom:1.5rem;}
+.divider{width:40px;height:1px;background:var(--blue);margin:1.2rem 0;}
+.prod-desc{font-size:.95rem;color:var(--g4);line-height:1.85;margin-bottom:1.5rem;}
+.prod-destaque{background:var(--sky-lt);border-left:3px solid var(--blue);padding:.85rem 1rem;border-radius:0 var(--r-md) var(--r-md) 0;font-size:.88rem;color:var(--navy);font-style:italic;margin-bottom:1.5rem;}
+.cor-label{font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin-bottom:.65rem;}
+.cor-box{display:flex;align-items:center;gap:.6rem;margin-bottom:2rem;flex-wrap:wrap;}
+.cor-item{display:flex;align-items:center;gap:.4rem;cursor:pointer;}
+.cor-swatch{width:22px;height:22px;border-radius:50%;border:2px solid transparent;box-shadow:0 0 0 1px var(--g2);transition:box-shadow .2s;}
+.cor-swatch.on{box-shadow:0 0 0 2px var(--navy);}
+.cor-nome{font-size:.82rem;color:var(--g4);}
+.beneficios{margin-bottom:2rem;}
+.ben-titulo{font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin-bottom:.75rem;}
+.ben-lista{list-style:none;display:flex;flex-direction:column;gap:.5rem;}
+.ben-lista li{font-size:.88rem;color:var(--g4);padding-left:1.2rem;position:relative;}
+.ben-lista li::before{content:'✓';position:absolute;left:0;color:var(--blue);font-size:.8rem;}
+.bwa-full{display:flex;align-items:center;justify-content:center;gap:.6rem;width:100%;padding:1rem;background:var(--wa);color:var(--white);border-radius:var(--r);font-size:.85rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:var(--t);margin-bottom:.85rem;cursor:pointer;}
+.bwa-full:hover{background:#1ea855;transform:translateY(-1px);box-shadow:0 6px 24px rgba(37,211,102,.35);}
+.bcatalogo{display:flex;align-items:center;justify-content:center;width:100%;padding:.9rem;border:1px solid var(--navy);color:var(--navy);border-radius:var(--r);font-size:.82rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:var(--t);}
+.bcatalogo:hover{background:var(--navy);color:var(--white);}
+.rel-section{max-width:1200px;margin:0 auto;padding:3rem 5vw 5rem;}
+.rel-titulo{font-family:var(--serif);font-size:1.6rem;color:var(--navy);margin-bottom:.3rem;}
+.rel-sub{font-size:.85rem;color:var(--g3);margin-bottom:2rem;}
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.rel-card{border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--g1);transition:var(--t);text-decoration:none;}
+.rel-card:hover{transform:translateY(-4px);box-shadow:var(--sh-lg);}
+.rel-img{aspect-ratio:3/4;background:var(--g1);overflow:hidden;}
+.rel-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s;}
+.rel-card:hover .rel-img img{transform:scale(1.04);}
+.rel-info{padding:1rem;}
+.rel-nome{font-family:var(--serif);font-size:1rem;color:var(--navy);margin-bottom:.2rem;}
+.rel-preco{font-size:.85rem;color:var(--blue);font-weight:500;}
+footer{background:var(--navy);color:var(--white);text-align:center;padding:2rem 5vw;font-size:.8rem;opacity:.85;}
+@media(max-width:768px){
+  main{padding-top:100px;}
+  .prod-wrap{grid-template-columns:1fr;gap:2rem;}
+  .galeria{position:static;}
+  .thumb{width:60px;}
+  .rel-grid{grid-template-columns:repeat(2,1fr);gap:1rem;}
+}
+@media(max-width:480px){
+  .prod-wrap{padding:1rem 4vw 4rem;}
+  .prod-nome{font-size:1.6rem;}
+}
+</style>
+</head>
+<body>
+
+<div class="ann">
+  <strong>Coleção Dia dos Namorados</strong> — Presentes especiais com frete grátis acima de R$ 199
+</div>
+
+<header id="hdr">
+  <div class="ni">
+    <a href="index.html" class="nback">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Voltar
+    </a>
+    <a href="index.html" class="nlogo">ZEIN Bolsas</a>
+    <a href="https://wa.me/5541998114832" class="nwa-btn">WhatsApp</a>
+  </div>
+</header>
+
+<main>
+  <nav class="bc">
+    <a href="index.html">Início</a>
+    <span>›</span>
+    <a href="index.html#colecao">Coleção Dia dos Namorados</a>
+    <span>›</span>
+    <span>Bag Luna</span>
+  </nav>
+
+  <div class="prod-wrap">
+    <div class="galeria">
+      <div class="main-foto">
+        <img id="foto-main" src="Coleção dia dos namorados/bag2.jpg" alt="Bag Luna">
+      </div>
+      <div class="thumb-row">
+        <div class="thumb on" onclick="trocarFoto(0,this)">
+          <img src="Coleção dia dos namorados/bag2.jpg" alt="Foto 1">
+        </div>
+        <div class="thumb" onclick="trocarFoto(1,this)">
+          <img src="Coleção dia dos namorados/bag2dentro.jpg" alt="Interior">
+        </div>
+        <div class="thumb" onclick="trocarFoto(2,this)">
+          <img src="Coleção dia dos namorados/bag2detalhe.jpg" alt="Detalhe">
+        </div>
+      </div>
+    </div>
+
+    <div class="infos">
+      <span class="badge rose">Presente Ideal</span>
+      <h1 class="prod-nome">Bag Luna</h1>
+      <p class="prod-ref">REF: BZ-008 — Coleção Dia dos Namorados</p>
+      <p class="prod-preco">R$ 99,90</p>
+      <p class="prod-preco-sub">À vista no PIX ou cartão</p>
+
+      <div class="divider"></div>
+
+      <p class="prod-desc">Delicada e sofisticada como o luar, a Bag Luna encanta pelos detalhes que só aparecem de perto. Com foto do interior e do detalhe do acabamento, você vai entender por que ela é chamada de "presente ideal". Uma peça que une elegância e acessibilidade — perfeita para surpreender alguém especial sem comprometer o orçamento. Romântica, refinada e irresistível.</p>
+
+      <div class="prod-destaque">Detalhes que encantam — do interior ao acabamento, perfeição em cada costura.</div>
+
+      <p class="cor-label">Cores disponíveis</p>
+      <div class="cor-box">
+        <div class="cor-item">
+          <div class="cor-swatch on" style="background:#C4A882;"></div>
+          <span class="cor-nome">Natural</span>
+        </div>
+      </div>
+
+      <div class="beneficios">
+        <p class="ben-titulo">Por que você vai amar</p>
+        <ul class="ben-lista">
+          <li>Interior revelado nas fotos</li>
+          <li>Acabamento com atenção aos detalhes</li>
+          <li>Design romântico e sofisticado</li>
+          <li>Preço acessível, qualidade premium</li>
+          <li>Embalagem especial para presente</li>
+        </ul>
+      </div>
+
+      <a href="https://wa.me/5541998114832?text=Olá!%20Tenho%20interesse%20na%20Bag%20Luna%20que%20vi%20na%20coleção%20especial%20de%20Dia%20dos%20Namorados%20da%20Bolsas%20Zein." class="bwa-full">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.107 1.51 5.833L.057 23.215a.75.75 0 00.918.919l5.453-1.429A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.518-5.188-1.42l-.372-.22-3.862 1.013 1.04-3.771-.242-.389A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Pedir pelo WhatsApp
+      </a>
+      <a href="index.html#colecao" class="bcatalogo">Ver catálogo completo</a>
+    </div>
+  </div>
+
+  <section class="rel-section">
+    <h2 class="rel-titulo">Você também pode gostar</h2>
+    <p class="rel-sub">Mais peças da Coleção Dia dos Namorados</p>
+    <div class="rel-grid">
+      <a href="bag-aurora.html" class="rel-card">
+        <div class="rel-img">
+          <img src="Coleção dia dos namorados/bag1.jpg" alt="Bag Aurora" loading="lazy">
+        </div>
+        <div class="rel-info">
+          <p class="rel-nome">Bag Aurora</p>
+          <p class="rel-preco">R$ 129,90</p>
+        </div>
+      </a>
+      <a href="bolsa-siena.html" class="rel-card">
+        <div class="rel-img">
+          <img src="Coleção dia dos namorados/bere2.jpg" alt="Bolsa Siena" loading="lazy">
+        </div>
+        <div class="rel-info">
+          <p class="rel-nome">Bolsa Siena</p>
+          <p class="rel-preco">R$ 99,90</p>
+        </div>
+      </a>
+      <a href="bolsa-capri.html" class="rel-card">
+        <div class="rel-img">
+          <img src="Coleção dia dos namorados/berem6.jpg" alt="Bolsa Capri" loading="lazy">
+        </div>
+        <div class="rel-info">
+          <p class="rel-nome">Bolsa Capri</p>
+          <p class="rel-preco">R$ 99,90</p>
+        </div>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2024 ZEIN Bolsas — Todos os direitos reservados
+</footer>
+
+<script>
+const fotos=[
+  'Coleção dia dos namorados/bag2.jpg',
+  'Coleção dia dos namorados/bag2dentro.jpg',
+  'Coleção dia dos namorados/bag2detalhe.jpg'
+];
+function trocarFoto(idx,el){
+  document.getElementById('foto-main').src=fotos[idx];
+  document.querySelectorAll('.thumb').forEach(t=>t.classList.remove('on'));
+  el.classList.add('on');
+}
+function ajustarTopBar(){
+  const ann=document.querySelector('.ann');
+  const hdr=document.getElementById('hdr');
+  if(ann&&hdr)hdr.style.top=ann.offsetHeight+'px';
+}
+ajustarTopBar();
+window.addEventListener('resize',ajustarTopBar);
+window.addEventListener('scroll',()=>{
+  const annH=document.querySelector('.ann')?.offsetHeight||36;
+  document.getElementById('hdr').classList.toggle('sc',window.scrollY>annH+20);
+});
+</script>
+</body>
+</html>

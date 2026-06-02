@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>ZEIN Bolsas — Curitiba | Bolsas e Acessórios Femininos Premium</title>
-<meta name="description" content="Bolsas femininas selecionadas com elegância em Curitiba. Atendimento consultivo exclusivo via WhatsApp. Shopping Cidade e Shopping Palladium."/>
-<meta property="og:title" content="ZEIN Bolsas — Boutique Digital Curitiba"/>
-<meta property="og:description" content="Bolsas femininas premium com atendimento exclusivo. Conheça nossa coleção."/>
+<title>ZEIN Bolsas — Coleção Dia dos Namorados | Presentes que Encantam</title>
+<meta name="description" content="Coleção especial Dia dos Namorados ZEIN Bolsas. Bolsas elegantes de R$ 99,90 a R$ 199,90. Atendimento via WhatsApp. Shopping Cidade e Shopping Palladium — Curitiba."/>
+<meta property="og:title" content="Coleção Dia dos Namorados — ZEIN Bolsas Curitiba"/>
+<meta property="og:description" content="Presentes que encantam. Bolsas sofisticadas para o Dia dos Namorados. Atendimento exclusivo via WhatsApp."/>
 <meta property="og:type" content="website"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -22,6 +22,7 @@ function trackWA(p,s,c){fbq('track','Lead',{content_name:p,content_ids:[s],curre
   --navy:#0B3A69;--navy-d:#072B50;--navy-l:#14508F;
   --blue:#486D98;--blue-l:#6E92BB;
   --sky:#C8D9EE;--sky-lt:#EBF2FA;
+  --rose:#8B1A3A;--rose-l:#F9EEF1;--rose-mid:#B5294D;
   --white:#FFFFFF;--off:#F7F9FC;
   --g1:#EEF1F5;--g2:#CDD4DE;--g3:#8A96A8;--g4:#5A6475;
   --black:#111827;--wa:#25D366;
@@ -272,6 +273,34 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1;}
 .cdot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer;transition:background .2s;}
 .cdot.on{background:var(--white);}
 
+/* DIA DOS NAMORADOS SECTION */
+.dn-section{background:linear-gradient(135deg,var(--navy-d) 0%,var(--navy) 50%,#1a2a4a 100%);padding:5rem 5vw;position:relative;overflow:hidden;}
+.dn-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(139,26,58,.18) 0%,transparent 70%);pointer-events:none;}
+.dn-section::after{content:'❤';position:absolute;right:5%;top:10%;font-size:8rem;opacity:.04;line-height:1;}
+.dn-inner{max-width:1360px;margin:0 auto;position:relative;z-index:1;}
+.dn-head{text-align:center;margin-bottom:3.5rem;}
+.dn-eyebrow{font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(200,217,238,.6);font-weight:400;display:block;margin-bottom:1rem;}
+.dn-title{font-family:var(--serif);font-size:clamp(2rem,4.5vw,3.2rem);color:var(--white);line-height:1.08;margin-bottom:1rem;}
+.dn-title em{font-style:italic;color:var(--sky);}
+.dn-desc{font-size:.92rem;color:rgba(255,255,255,.55);max-width:500px;margin:0 auto 1.5rem;line-height:1.8;}
+.dn-divider{width:40px;height:1px;background:rgba(200,217,238,.3);margin:.8rem auto 1.5rem;}
+.dn-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-bottom:3rem;}
+.dn-card{border-radius:var(--r-lg);overflow:hidden;position:relative;cursor:pointer;transition:transform .3s,box-shadow .3s;}
+.dn-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.35);}
+.dn-card-img{aspect-ratio:3/4;background:rgba(255,255,255,.05);overflow:hidden;}
+.dn-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;}
+.dn-card:hover .dn-card-img img{transform:scale(1.06);}
+.dn-card-info{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(7,43,80,.9) 0%,transparent 100%);padding:1.2rem 1rem .9rem;transform:translateY(5px);transition:transform .3s;}
+.dn-card:hover .dn-card-info{transform:translateY(0);}
+.dn-card-badge{display:inline-block;background:var(--rose);color:var(--white);font-size:.58rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:.2rem .6rem;border-radius:2px;margin-bottom:.4rem;}
+.dn-card-nome{font-family:var(--serif);font-size:1rem;color:var(--white);display:block;line-height:1.2;}
+.dn-card-preco{font-size:.82rem;color:var(--sky);font-weight:500;margin-top:.2rem;}
+.dn-cta{text-align:center;}
+.dn-cta-wa{display:inline-flex;align-items:center;gap:.6rem;background:var(--wa);color:var(--white);padding:.9rem 2.2rem;border-radius:var(--r);font-size:.82rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;transition:var(--t);}
+.dn-cta-wa:hover{background:#1ea855;transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.4);}
+@media(max-width:1024px){.dn-grid{grid-template-columns:repeat(2,1fr);gap:1rem;}}
+@media(max-width:480px){.dn-grid{grid-template-columns:repeat(2,1fr);gap:.75rem;}}
+
 /* FAQ */
 .fql{max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:.65rem;}
 .fq{background:var(--white);border-radius:var(--r-md);border:1px solid var(--g1);overflow:hidden;transition:var(--t);}
@@ -351,7 +380,7 @@ footer{background:var(--navy-d);color:var(--white);padding:4rem 5vw 2rem;}
 </head>
 <body>
 
-<div class="ann">✦ <strong>Novidades toda semana</strong> — Atendimento consultivo via WhatsApp ✦ Shopping Cidade &amp; Shopping Palladium ✦</div>
+<div class="ann">❤️ <strong>Coleção Dia dos Namorados</strong> — Presentes que encantam · De R$ 99,90 a R$ 199,90 · Shopping Cidade &amp; Palladium</div>
 
 <!-- HEADER -->
 <header id="hdr">
@@ -391,10 +420,11 @@ footer{background:var(--navy-d);color:var(--white);padding:4rem 5vw 2rem;}
 <div class="mnav" id="mnav">
   <button class="mc" onclick="toggleMenu()">✕</button>
   <a href="#lancamentos" onclick="toggleMenu()">Lançamentos</a>
+  <a href="#dia-dos-namorados" onclick="toggleMenu()">❤ Dia dos Namorados</a>
   <a href="#catalogo" onclick="toggleMenu()">Catálogo</a>
   <a href="#mais-vendidos" onclick="toggleMenu()">Mais Vendidas</a>
   <a href="#lojas" onclick="toggleMenu()">Lojas</a>
-  <a href="https://wa.me/5541998114832" target="_blank" onclick="toggleMenu()">💬 WhatsApp</a>
+  <a href="https://wa.me/5541998114832?text=Olá!%20Quero%20conhecer%20a%20Coleção%20Dia%20dos%20Namorados%20da%20Bolsas%20Zein." target="_blank" onclick="toggleMenu()">💬 WhatsApp</a>
 </div>
 
 <!-- HERO -->
@@ -422,11 +452,11 @@ footer{background:var(--navy-d);color:var(--white);padding:4rem 5vw 2rem;}
   <div class="hr">
     <div class="hbg">
       <div class="hframe">
-        <img src="imagens/bolsa-cora-1.jpeg" alt="Bolsa Cora ZEIN" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
+        <img src="Coleção dia dos namorados/bere5modelo.jpg" alt="Coleção Dia dos Namorados ZEIN" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
         <div class="hprice">
-          <div class="hprice-l">Novidade da semana</div>
-          <div class="hprice-v">Bolsa Cora</div>
-          <div style="font-size:.78rem;color:#C0392B;font-weight:500;margin-top:.2rem;">R$ 120</div>
+          <div class="hprice-l">Coleção Especial</div>
+          <div class="hprice-v">Dia dos Namorados</div>
+          <div style="font-size:.78rem;color:var(--rose);font-weight:500;margin-top:.2rem;">De R$ 99,90 a R$ 199,90</div>
         </div>
       </div>
     </div>
@@ -446,39 +476,39 @@ footer{background:var(--navy-d);color:var(--white);padding:4rem 5vw 2rem;}
 <!-- LANÇAMENTOS -->
 <section id="lancamentos"><div class="sec">
   <div class="sechd rv">
-    <span class="ey">Chegou agora</span>
-    <h2 class="st">Lançamentos <em class="si">da semana</em></h2>
+    <span class="ey">Edição Especial 2025</span>
+    <h2 class="st">Coleção <em class="si">Dia dos Namorados</em></h2>
     <div class="dv"></div>
-    <p class="ss">As peças mais aguardadas já estão disponíveis. Clique para consultar disponibilidade com nossa consultora.</p>
+    <p class="ss">Peças criadas para encantar. Presenteie com sofisticação e elegância — atendimento exclusivo via WhatsApp.</p>
   </div>
   <div class="lc-destaque rv">
     <div class="lc-dest-fotos">
       <div class="lc-dest-main" id="dest-main">
-        <img src="imagens/bolsa-cora-1.jpeg" alt="Bolsa Cora" id="dest-img" style="width:100%;height:100%;object-fit:cover;display:block;transition:opacity .35s;">
-        <span class="lc-nb">Novo</span>
+        <img src="Coleção dia dos namorados/bere5modelo.jpg" alt="Bolsa Toscana" id="dest-img" style="width:100%;height:100%;object-fit:cover;display:block;transition:opacity .35s;">
+        <span class="lc-nb" style="background:var(--rose);">Edição Especial</span>
       </div>
       <div class="lc-dest-thumbs">
-        <div class="lc-dt on" onclick="destFoto(0,this)"><img src="imagens/bolsa-cora-1.jpeg" alt="1"></div>
-        <div class="lc-dt" onclick="destFoto(1,this)"><img src="imagens/bolsa-cora-2.jpeg" alt="2"></div>
-        <div class="lc-dt" onclick="destFoto(2,this)"><img src="imagens/bolsa-cora-3.jpeg" alt="3"></div>
-        <div class="lc-dt" onclick="destFoto(3,this)"><img src="imagens/bolsa-cora-4.jpeg" alt="4"></div>
-        <div class="lc-dt" onclick="destFoto(4,this)"><img src="imagens/bolsa-cora-5.jpeg" alt="5"></div>
-        <div class="lc-dt" onclick="destFoto(5,this)"><img src="imagens/bolsa-cora-6.jpeg" alt="6"></div>
+        <div class="lc-dt on" onclick="destFoto(0,this)"><img src="Coleção dia dos namorados/bere5modelo.jpg" alt="1"></div>
+        <div class="lc-dt" onclick="destFoto(1,this)"><img src="Coleção dia dos namorados/berem5branca.jpg" alt="2"></div>
+        <div class="lc-dt" onclick="destFoto(2,this)"><img src="Coleção dia dos namorados/berem5preta.jpg" alt="3"></div>
+        <div class="lc-dt" onclick="destFoto(3,this)"><img src="Coleção dia dos namorados/berem5café.jpg" alt="4"></div>
+        <div class="lc-dt" onclick="destFoto(4,this)"><img src="Coleção dia dos namorados/berem5dentro.jpg" alt="5"></div>
       </div>
     </div>
     <div class="lc-dest-info">
-      <span class="ey">Chegou agora</span>
-      <h3 style="font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.4rem);color:var(--navy);font-weight:400;line-height:1.1;margin-bottom:.75rem;">Bolsa Cora</h3>
+      <span class="ey">Destaque da coleção</span>
+      <h3 style="font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.4rem);color:var(--navy);font-weight:400;line-height:1.1;margin-bottom:.75rem;">Bolsa Toscana</h3>
       <div class="dv"></div>
-      <p style="font-size:.95rem;color:var(--g4);line-height:1.85;margin-bottom:1.5rem;">Charme e praticidade em um só lugar. A Bolsa Cora combina design moderno com acabamento de qualidade, perfeita para o dia a dia.</p>
-      <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.5rem;">
-        <div style="width:22px;height:22px;border-radius:50%;background:#C0392B;border:2px solid var(--navy);"></div>
-        <span style="font-size:.85rem;color:var(--g4);">Vermelho</span>
+      <p style="font-size:.95rem;color:var(--g4);line-height:1.85;margin-bottom:1.5rem;">Inspirada nas colinas douradas da Toscana, esta bolsa carrega em cada costura a leveza e romantismo da paisagem italiana. Disponível em 3 cores exclusivas — o presente perfeito para o Dia dos Namorados.</p>
+      <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:.4rem;"><div style="width:18px;height:18px;border-radius:50%;background:#F0ECE4;border:1.5px solid #ccc;"></div><span style="font-size:.82rem;color:var(--g4);">Branco</span></div>
+        <div style="display:flex;align-items:center;gap:.4rem;"><div style="width:18px;height:18px;border-radius:50%;background:#1C1C1C;"></div><span style="font-size:.82rem;color:var(--g4);">Preto</span></div>
+        <div style="display:flex;align-items:center;gap:.4rem;"><div style="width:18px;height:18px;border-radius:50%;background:#6B4226;"></div><span style="font-size:.82rem;color:var(--g4);">Café</span></div>
       </div>
-      <div style="font-family:var(--serif);font-size:2rem;color:var(--navy);font-weight:500;margin:1rem 0 1.5rem;">R$ 120</div>
+      <div style="font-family:var(--serif);font-size:2rem;color:var(--navy);font-weight:500;margin:.75rem 0 1.5rem;">R$ 149,90</div>
       <div style="display:flex;gap:.85rem;flex-wrap:wrap;">
-        <a href="bolsa-cora.html" class="btn b-navy">Ver detalhes</a>
-        <a href="https://wa.me/5541998114832?text=Olá!%20Tenho%20interesse%20na%20Bolsa%20Cora%20(BZ-009)%20na%20cor%20Vermelha.%20Pode%20me%20ajudar?%20💙" target="_blank" class="bwa">
+        <a href="bolsa-toscana.html" class="btn b-navy">Ver detalhes</a>
+        <a href="https://wa.me/5541998114832?text=Olá!%20Tenho%20interesse%20na%20Bolsa%20Toscana%20que%20vi%20na%20coleção%20especial%20de%20Dia%20dos%20Namorados%20da%20Bolsas%20Zein." target="_blank" class="bwa">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
           Consultar
         </a>
@@ -490,17 +520,13 @@ footer{background:var(--navy-d);color:var(--white);padding:4rem 5vw 2rem;}
 <!-- CATÁLOGO -->
 <div id="catalogo" class="bg-off"><div class="sec">
   <div class="sechd rv">
-    <span class="ey">Coleção completa</span>
-    <h2 class="st">Nosso <em class="si">catálogo</em></h2>
+    <span class="ey">Coleção Dia dos Namorados 2025</span>
+    <h2 class="st">Todos os <em class="si">modelos</em></h2>
     <div class="dv"></div>
-    <p class="ss">Peças para cada estilo e ocasião. Escolha a cor e nossa consultora cuida de tudo pelo WhatsApp.</p>
+    <p class="ss">8 modelos exclusivos para presentear com elegância. Cada peça pensada para encantar — do detalhe ao acabamento.</p>
   </div>
   <div class="fb rv">
-    <button class="fbt on" onclick="filterP('todos',this)">Todos</button>
-    <button class="fbt" onclick="filterP('bolsas',this)">Bolsas</button>
-    <button class="fbt" onclick="filterP('carteiras',this)">Carteiras</button>
-    <button class="fbt" onclick="filterP('mochilas',this)">Mochilas</button>
-    <button class="fbt" onclick="filterP('clutch',this)">Clutch &amp; Nécessaires</button>
+    <button class="fbt on" onclick="filterP('todos',this)">Todos os modelos</button>
   </div>
   <div class="pg" id="pgrid"></div>
   <div style="text-align:center;margin-top:3rem" class="rv">
@@ -518,6 +544,58 @@ footer{background:var(--navy-d);color:var(--white);padding:4rem 5vw 2rem;}
   </div>
   <div class="bss rv" id="bscroll"></div>
 </div></section>
+
+<!-- DIA DOS NAMORADOS SECTION -->
+<section id="dia-dos-namorados" class="dn-section">
+  <div class="dn-inner">
+    <div class="dn-head rv">
+      <span class="dn-eyebrow">❤ Edição Especial · Junho 2025</span>
+      <h2 class="dn-title">Um Presente Para<br><em>Quem Você Ama</em></h2>
+      <div class="dn-divider"></div>
+      <p class="dn-desc">Bolsas que transformam um momento comum em uma memória inesquecível. Escolha com carinho, presenteie com elegância.</p>
+    </div>
+    <div class="dn-grid rv">
+      <a href="bolsa-verona.html" class="dn-card">
+        <div class="dn-card-img"><img src="Coleção dia dos namorados/bere1.jpg" alt="Bolsa Verona" loading="lazy"></div>
+        <div class="dn-card-info"><span class="dn-card-badge">Lançamento</span><span class="dn-card-nome">Bolsa Verona</span><div class="dn-card-preco">R$ 179,90</div></div>
+      </a>
+      <a href="bolsa-siena.html" class="dn-card">
+        <div class="dn-card-img"><img src="Coleção dia dos namorados/bere2.jpg" alt="Bolsa Siena" loading="lazy"></div>
+        <div class="dn-card-info"><span class="dn-card-badge">Mais Procurada</span><span class="dn-card-nome">Bolsa Siena</span><div class="dn-card-preco">R$ 99,90</div></div>
+      </a>
+      <a href="bolsa-firenze.html" class="dn-card">
+        <div class="dn-card-img"><img src="Coleção dia dos namorados/berem3off.jpg" alt="Bolsa Firenze" loading="lazy"></div>
+        <div class="dn-card-info"><span class="dn-card-badge">Presente Ideal</span><span class="dn-card-nome">Bolsa Firenze</span><div class="dn-card-preco">R$ 199,90</div></div>
+      </a>
+      <a href="bolsa-milano.html" class="dn-card">
+        <div class="dn-card-img"><img src="Coleção dia dos namorados/berem4preta.jpg" alt="Bolsa Milano" loading="lazy"></div>
+        <div class="dn-card-info"><span class="dn-card-badge">Favorita</span><span class="dn-card-nome">Bolsa Milano</span><div class="dn-card-preco">R$ 199,90</div></div>
+      </a>
+      <a href="bolsa-toscana.html" class="dn-card">
+        <div class="dn-card-img"><img src="Coleção dia dos namorados/bere5modelo.jpg" alt="Bolsa Toscana" loading="lazy"></div>
+        <div class="dn-card-info"><span class="dn-card-badge">Edição Especial</span><span class="dn-card-nome">Bolsa Toscana</span><div class="dn-card-preco">R$ 149,90</div></div>
+      </a>
+      <a href="bolsa-capri.html" class="dn-card">
+        <div class="dn-card-img"><img src="Coleção dia dos namorados/berem6.jpg" alt="Bolsa Capri" loading="lazy"></div>
+        <div class="dn-card-info"><span class="dn-card-badge">Lançamento</span><span class="dn-card-nome">Bolsa Capri</span><div class="dn-card-preco">R$ 99,90</div></div>
+      </a>
+      <a href="bag-aurora.html" class="dn-card">
+        <div class="dn-card-img"><img src="Coleção dia dos namorados/bag1usando.jpg" alt="Bag Aurora" loading="lazy"></div>
+        <div class="dn-card-info"><span class="dn-card-badge">Mais Procurada</span><span class="dn-card-nome">Bag Aurora</span><div class="dn-card-preco">R$ 129,90</div></div>
+      </a>
+      <a href="bag-luna.html" class="dn-card">
+        <div class="dn-card-img"><img src="Coleção dia dos namorados/bag2.jpg" alt="Bag Luna" loading="lazy"></div>
+        <div class="dn-card-info"><span class="dn-card-badge">Presente Ideal</span><span class="dn-card-nome">Bag Luna</span><div class="dn-card-preco">R$ 99,90</div></div>
+      </a>
+    </div>
+    <div class="dn-cta rv">
+      <a href="https://wa.me/5541998114832?text=Olá!%20Quero%20conhecer%20a%20Coleção%20Dia%20dos%20Namorados%20da%20Bolsas%20Zein.%20Pode%20me%20ajudar?" target="_blank" class="dn-cta-wa">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.107 1.51 5.833L.057 23.215a.75.75 0 00.918.919l5.453-1.429A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.518-5.188-1.42l-.372-.22-3.862 1.013 1.04-3.771-.242-.389A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Ver toda a coleção no WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
 
 <!-- WA SECTION -->
 <div class="bg-off" style="padding:5rem 5vw"><div style="max-width:1360px;margin:0 auto">
@@ -649,10 +727,10 @@ footer{background:var(--navy-d);color:var(--white);padding:4rem 5vw 2rem;}
 <div id="waf">
   <div class="wab" id="wabubble" style="position:relative">
     <button class="wabx" onclick="dismissBubble(event)">✕</button>
-    <strong>Olá! Podemos te ajudar? 💙</strong>
-    <p>Nossa consultora está online agora.</p>
+    <strong>❤️ Coleção Dia dos Namorados</strong>
+    <p>Presente especial? Nossa consultora te ajuda agora!</p>
   </div>
-  <div class="wabtn" onclick="window.open('https://wa.me/5541998114832?text=Olá!%20Tenho%20interesse%20em%20bolsas%20da%20ZEIN.%20Pode%20me%20ajudar?%20💙','_blank');trackWA('Flutuante','000','Float')" role="button" aria-label="WhatsApp">
+  <div class="wabtn" onclick="window.open('https://wa.me/5541998114832?text=Olá!%20Quero%20conhecer%20a%20Coleção%20Dia%20dos%20Namorados%20da%20Bolsas%20Zein.%20Pode%20me%20ajudar?','_blank');trackWA('Flutuante','000','Float')" role="button" aria-label="WhatsApp">
     <div class="wap"></div>
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.114.553 4.098 1.524 5.823L0 24l6.358-1.496A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.876 0-3.638-.49-5.162-1.348l-.368-.217-3.776.888.92-3.674-.239-.379A9.957 9.957 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
   </div>
@@ -790,7 +868,7 @@ function initRV(){
   document.querySelectorAll('.rv:not(.in)').forEach(el=>obs.observe(el));
 }
 
-const destFotos=['imagens/bolsa-cora-1.jpeg','imagens/bolsa-cora-2.jpeg','imagens/bolsa-cora-3.jpeg','imagens/bolsa-cora-4.jpeg','imagens/bolsa-cora-5.jpeg','imagens/bolsa-cora-6.jpeg'];
+const destFotos=['Coleção dia dos namorados/bere5modelo.jpg','Coleção dia dos namorados/berem5branca.jpg','Coleção dia dos namorados/berem5preta.jpg','Coleção dia dos namorados/berem5café.jpg','Coleção dia dos namorados/berem5dentro.jpg'];
 function destFoto(idx,el){
   document.getElementById('dest-img').src=destFotos[idx];
   document.querySelectorAll('.lc-dt').forEach(t=>t.classList.remove('on'));

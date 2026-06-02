@@ -1,26 +1,162 @@
 {
   "produtos": [
     {
-      "id": "BZ-009",
-      "nome": "Bolsa Cora",
+      "id": "BZ-001",
+      "nome": "Bolsa Verona",
+      "codigo": "m1",
       "categoria": "bolsas",
-      "badge": "new",
-      "preco": "R$ 120",
-      "descricao": "Charme e praticidade em um só lugar. A Bolsa Cora combina design moderno com acabamento de qualidade, perfeita para o dia a dia.",
-      "imagem": "",
-      "pagina": "bolsa-cora.html",
+      "badge": "Lançamento",
+      "preco": "R$ 179,90",
+      "descricao": "Elegância italiana em cada detalhe. A Bolsa Verona é a escolha perfeita para quem deseja sofisticação no dia a dia.",
+      "pagina": "bolsa-verona.html",
       "imagens": [
-        "imagens/bolsa-cora-1.jpeg",
-        "imagens/bolsa-cora-2.jpeg",
-        "imagens/bolsa-cora-3.jpeg",
-        "imagens/bolsa-cora-4.jpeg",
-        "imagens/bolsa-cora-5.jpeg",
-        "imagens/bolsa-cora-6.jpeg"
+        "Coleção dia dos namorados/bere1.jpg"
       ],
       "cores": [
-        { "hex": "#C0392B", "nome": "Vermelho" }
+        { "hex": "#C4A882", "nome": "Caramelo" }
+      ]
+    },
+    {
+      "id": "BZ-002",
+      "nome": "Bolsa Siena",
+      "codigo": "m2",
+      "categoria": "bolsas",
+      "badge": "Mais Procurada",
+      "preco": "R$ 99,90",
+      "descricao": "Charme e versatilidade em uma peça só. A Bolsa Siena acompanha você do trabalho ao jantar com elegância.",
+      "pagina": "bolsa-siena.html",
+      "imagens": [
+        "Coleção dia dos namorados/bere2.jpg",
+        "Coleção dia dos namorados/berem2branca.jpg",
+        "Coleção dia dos namorados/berem2dentro.jpg"
+      ],
+      "cores": [
+        { "hex": "#C4A882", "nome": "Natural" },
+        { "hex": "#F0ECE4", "nome": "Branco" }
+      ]
+    },
+    {
+      "id": "BZ-003",
+      "nome": "Bolsa Firenze",
+      "codigo": "m3",
+      "categoria": "bolsas",
+      "badge": "Presente Ideal",
+      "preco": "R$ 199,90",
+      "descricao": "A mais sofisticada da coleção. A Bolsa Firenze foi criada para mulheres que apreciam o requinte e a beleza dos detalhes.",
+      "pagina": "bolsa-firenze.html",
+      "imagens": [
+        "Coleção dia dos namorados/berem3off.jpg",
+        "Coleção dia dos namorados/berem3branca.jpg"
+      ],
+      "cores": [
+        { "hex": "#E8E0D5", "nome": "Off-White" },
+        { "hex": "#F0ECE4", "nome": "Branco" }
+      ]
+    },
+    {
+      "id": "BZ-004",
+      "nome": "Bolsa Milano",
+      "codigo": "m4",
+      "categoria": "bolsas",
+      "badge": "Favorita das Clientes",
+      "preco": "R$ 199,90",
+      "descricao": "Presença e poder. A Bolsa Milano combina linhas modernas com acabamento premium para a mulher contemporânea.",
+      "pagina": "bolsa-milano.html",
+      "imagens": [
+        "Coleção dia dos namorados/berem4preta.jpg",
+        "Coleção dia dos namorados/berem4branca.jpg",
+        "Coleção dia dos namorados/berem4dentro.jpg"
+      ],
+      "cores": [
+        { "hex": "#1C1C1C", "nome": "Preto" },
+        { "hex": "#F0ECE4", "nome": "Branco" }
+      ]
+    },
+    {
+      "id": "BZ-005",
+      "nome": "Bolsa Toscana",
+      "codigo": "m5",
+      "categoria": "bolsas",
+      "badge": "Edição Especial",
+      "preco": "R$ 149,90",
+      "descricao": "Inspirada nas colinas da Toscana, esta bolsa traz a beleza e serenidade italiana para o seu dia a dia com estilo.",
+      "pagina": "bolsa-toscana.html",
+      "imagens": [
+        "Coleção dia dos namorados/bere5modelo.jpg",
+        "Coleção dia dos namorados/berem5branca.jpg",
+        "Coleção dia dos namorados/berem5preta.jpg",
+        "Coleção dia dos namorados/berem5café.jpg",
+        "Coleção dia dos namorados/berem5dentro.jpg"
+      ],
+      "cores": [
+        { "hex": "#F0ECE4", "nome": "Branco" },
+        { "hex": "#1C1C1C", "nome": "Preto" },
+        { "hex": "#6B4226", "nome": "Café" }
+      ]
+    },
+    {
+      "id": "BZ-006",
+      "nome": "Bolsa Capri",
+      "codigo": "m6",
+      "categoria": "bolsas",
+      "badge": "Lançamento",
+      "preco": "R$ 99,90",
+      "descricao": "Leve como a brisa do Mediterrâneo. A Bolsa Capri é perfeita para quem busca estilo descomplicado com muito charme.",
+      "pagina": "bolsa-capri.html",
+      "imagens": [
+        "Coleção dia dos namorados/berem6.jpg",
+        "Coleção dia dos namorados/berem6preta.jpg",
+        "Coleção dia dos namorados/berem6branca.jpg",
+        "Coleção dia dos namorados/berem6dentro.jpg",
+        "Coleção dia dos namorados/berem6usando.jpg",
+        "Coleção dia dos namorados/bere6dentro.jpg"
+      ],
+      "cores": [
+        { "hex": "#1C1C1C", "nome": "Preto" },
+        { "hex": "#F0ECE4", "nome": "Branco" }
+      ]
+    },
+    {
+      "id": "BZ-007",
+      "nome": "Bag Aurora",
+      "codigo": "bag1",
+      "categoria": "bolsas",
+      "badge": "Mais Procurada",
+      "preco": "R$ 129,90",
+      "descricao": "Espaçosa e elegante. A Bag Aurora tem capacidade para o seu dia inteiro sem abrir mão do estilo e da sofisticação.",
+      "pagina": "bag-aurora.html",
+      "imagens": [
+        "Coleção dia dos namorados/bag1.jpg",
+        "Coleção dia dos namorados/bag1preta.jpg",
+        "Coleção dia dos namorados/bag1verde.jpg",
+        "Coleção dia dos namorados/bag1tras.jpg",
+        "Coleção dia dos namorados/bag1dentro.jpg",
+        "Coleção dia dos namorados/bag1lado.jpg",
+        "Coleção dia dos namorados/bag1usando.jpg"
+      ],
+      "cores": [
+        { "hex": "#1C1C1C", "nome": "Preto" },
+        { "hex": "#2C5F2E", "nome": "Verde" }
+      ]
+    },
+    {
+      "id": "BZ-008",
+      "nome": "Bag Luna",
+      "codigo": "bag2",
+      "categoria": "bolsas",
+      "badge": "Presente Ideal",
+      "preco": "R$ 99,90",
+      "descricao": "Delicada e sofisticada como o luar. A Bag Luna é o acessório que completa qualquer look com perfeição e leveza.",
+      "pagina": "bag-luna.html",
+      "imagens": [
+        "Coleção dia dos namorados/bag2.jpg",
+        "Coleção dia dos namorados/bag2dentro.jpg",
+        "Coleção dia dos namorados/bag2detalhe.jpg"
+      ],
+      "cores": [
+        { "hex": "#C4A882", "nome": "Natural" }
       ]
     }
   ],
-  "maisVendidos": ["BZ-009"]
+  "maisVendidos": ["BZ-005", "BZ-007", "BZ-003", "BZ-004", "BZ-001"]
 }
