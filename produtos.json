@@ -10,12 +10,12 @@
       "descricao": "Elegância italiana em cada detalhe. A Bolsa Verona é a escolha perfeita para quem deseja sofisticação no dia a dia.",
       "pagina": "bolsa-verona.html",
       "imagens": [
-        "Coleção dia dos namorados/berem1-modelo.jpg",
         "Coleção dia dos namorados/berem1- bege.jpg",
         "Coleção dia dos namorados/berem1-branca.jpg",
         "Coleção dia dos namorados/berem1- preta.jpg",
         "Coleção dia dos namorados/berem1-marrom.jpg",
-        "Coleção dia dos namorados/berem1-dentro.jpg"
+        "Coleção dia dos namorados/berem1-dentro.jpg",
+        "Coleção dia dos namorados/berem1-modelo.jpg"
       ],
       "cores": [
         { "hex": "#C4A882", "nome": "Bege" },
@@ -119,11 +119,13 @@
       "descricao": "Leve como a brisa do Mediterrâneo. A Bolsa Capri é perfeita para quem busca estilo descomplicado com muito charme.",
       "pagina": "bolsa-capri.html",
       "imagens": [
-        "Coleção dia dos namorados/berem6.jpg",
-        "Coleção dia dos namorados/berem6preta.jpg",
+        "Coleção dia dos namorados/berem6bege.jpg",
         "Coleção dia dos namorados/berem6branca.jpg",
+        "Coleção dia dos namorados/berem6preta.jpg",
+        "Coleção dia dos namorados/berem6marrom.jpg",
         "Coleção dia dos namorados/berem6dentro.jpg",
-        "Coleção dia dos namorados/berem6usando.jpg"
+        "Coleção dia dos namorados/berem6usando.jpg",
+        "Coleção dia dos namorados/berem6.jpg"
       ],
       "cores": [
         { "hex": "#1C1C1C", "nome": "Preto" },
@@ -163,14 +165,14 @@
       "descricao": "Delicado e sofisticado. A Bag Marco é o acessório que completa qualquer look com perfeição e leveza.",
       "pagina": "bag-marco.html",
       "imagens": [
+        "Coleção dia dos namorados/bag2cinza.jpg",
+        "Coleção dia dos namorados/bag2preta.jpg",
+        "Coleção dia dos namorados/bag2dourada.jpg",
+        "Coleção dia dos namorados/bag2.jpg",
+        "Coleção dia dos namorados/bag2tras.jpg",
         "Coleção dia dos namorados/bag2dentro.jpg",
         "Coleção dia dos namorados/bag2detalhe.jpg",
-        "Coleção dia dos namorados/bag2preta.jpg",
-        "Coleção dia dos namorados/bag2cinza.jpg",
-        "Coleção dia dos namorados/bag2dourada.jpg",
-        "Coleção dia dos namorados/bag2tras.jpg",
-        "Coleção dia dos namorados/bag2usando.jpg",
-        "Coleção dia dos namorados/bag2.jpg"
+        "Coleção dia dos namorados/bag2usando.jpg"
       ],
       "cores": [
         { "hex": "#C4A882", "nome": "Natural" },
