@@ -145,7 +145,7 @@ footer{background:var(--navy);color:var(--white);text-align:center;padding:2rem 
       <div class="divider"></div>
       <p class="prod-desc">A joia da coleção. A Bolsa Firenze representa o ápice da sofisticação italiana — cada detalhe foi pensado para encantar mulheres que apreciam o verdadeiro requinte. Com acabamento impecável e design exclusivo, ela é mais do que uma bolsa: é uma declaração de estilo. O presente que ela nunca vai esquecer.</p>
       <div class="prod-destaque">"O presente mais sofisticado da coleção — para momentos inesquecíveis."</div>
-      <div class="cor-label">Cores disponíveis</div><div class="cor-box"><div class="cor-item"><div class="cor-swatch on" style="background:#E8E0D5;"></div><span class="cor-nome">Off-White</span></div><div class="cor-item"><div class="cor-swatch" style="background:#F0ECE4;box-shadow:0 0 0 1px #ccc;"></div><span class="cor-nome">Branco</span></div></div>
+      <div class="cor-label">Cores disponíveis</div><div class="cor-box"><div class="cor-item" onclick="pickCor(0)" style="cursor:pointer;">><div class="cor-swatch on" style="background:#E8E0D5;"></div><span class="cor-nome">Off-White</span></div><div class="cor-item" onclick="pickCor(1)" style="cursor:pointer;">><div class="cor-swatch" style="background:#F0ECE4;box-shadow:0 0 0 1px #ccc;"></div><span class="cor-nome">Branco</span></div></div>
       <div class="beneficios">
         <div class="ben-titulo">Por que você vai amar</div>
         <ul class="ben-lista">
@@ -186,6 +186,12 @@ footer{background:var(--navy);color:var(--white);text-align:center;padding:2rem 
 
 <script>
 const fotos=['Coleção dia dos namorados/berem3off.jpg','Coleção dia dos namorados/berem3branca.jpg'];
+
+function pickCor(idx){
+  const thumbs=document.querySelectorAll('.thumb');
+  if(thumbs[idx]) trocarFoto(idx,thumbs[idx]);
+  document.querySelectorAll('.cor-swatch').forEach((s,i)=>s.classList.toggle('on',i===idx));
+}
 function trocarFoto(idx,el){
   document.getElementById('foto-main').src=fotos[idx];
   document.querySelectorAll('.thumb').forEach(t=>t.classList.remove('on'));

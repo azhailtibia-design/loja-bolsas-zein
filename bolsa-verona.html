@@ -150,10 +150,10 @@ footer{background:var(--navy);color:var(--white);text-align:center;padding:2rem 
       <p class="prod-desc">Criada para mulheres que valorizam o bom gosto, a Bolsa Verona combina linhas refinadas com materiais de alta qualidade. Seu design atemporal transita da rotina às ocasiões especiais com naturalidade. Um presente que encanta sem precisar de palavras — perfeita para presentear quem você ama neste Dia dos Namorados.</p>
       <div class="prod-destaque">"Design atemporal com acabamento refinado — a peça que nunca sai de moda."</div>
       <div class="cor-label">Cores disponíveis</div><div class="cor-box">
-        <div class="cor-item"><div class="cor-swatch on" style="background:#C4A882;"></div><span class="cor-nome">Bege</span></div>
-        <div class="cor-item"><div class="cor-swatch" style="background:#F0ECE4;border:1px solid #ccc;"></div><span class="cor-nome">Branca</span></div>
-        <div class="cor-item"><div class="cor-swatch" style="background:#1C1C1C;"></div><span class="cor-nome">Preta</span></div>
-        <div class="cor-item"><div class="cor-swatch" style="background:#6B4226;"></div><span class="cor-nome">Marrom</span></div>
+        <div class="cor-item" onclick="pickCor(0)" style="cursor:pointer;">><div class="cor-swatch on" style="background:#C4A882;"></div><span class="cor-nome">Bege</span></div>
+        <div class="cor-item" onclick="pickCor(1)" style="cursor:pointer;">><div class="cor-swatch" style="background:#F0ECE4;border:1px solid #ccc;"></div><span class="cor-nome">Branca</span></div>
+        <div class="cor-item" onclick="pickCor(2)" style="cursor:pointer;">><div class="cor-swatch" style="background:#1C1C1C;"></div><span class="cor-nome">Preta</span></div>
+        <div class="cor-item" onclick="pickCor(3)" style="cursor:pointer;">><div class="cor-swatch" style="background:#6B4226;"></div><span class="cor-nome">Marrom</span></div>
       </div>
       <div class="beneficios">
         <div class="ben-titulo">Por que você vai amar</div>
@@ -202,6 +202,12 @@ const fotos=[
   'Coleção dia dos namorados/berem1-dentro.jpg',
   'Coleção dia dos namorados/berem1-modelo.jpg'
 ];
+
+function pickCor(idx){
+  const thumbs=document.querySelectorAll('.thumb');
+  if(thumbs[idx]) trocarFoto(idx,thumbs[idx]);
+  document.querySelectorAll('.cor-swatch').forEach((s,i)=>s.classList.toggle('on',i===idx));
+}
 function trocarFoto(idx,el){
   document.getElementById('foto-main').src=fotos[idx];
   document.querySelectorAll('.thumb').forEach(t=>t.classList.remove('on'));

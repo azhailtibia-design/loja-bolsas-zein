@@ -170,11 +170,11 @@ footer{background:var(--navy);color:var(--white);text-align:center;padding:2rem 
 
       <p class="cor-label">Cores disponíveis</p>
       <div class="cor-box">
-        <div class="cor-item">
+        <div class="cor-item" onclick="pickCor(0)" style="cursor:pointer;">>
           <div class="cor-swatch on" style="background:#1C1C1C;"></div>
           <span class="cor-nome">Preto</span>
         </div>
-        <div class="cor-item">
+        <div class="cor-item" onclick="pickCor(1)" style="cursor:pointer;">>
           <div class="cor-swatch" style="background:#F0ECE4;"></div>
           <span class="cor-nome">Branco</span>
         </div>
@@ -248,6 +248,12 @@ const fotos=[
   'Coleção dia dos namorados/berem6usando.jpg',
   'Coleção dia dos namorados/berem6.jpg'
 ];
+
+function pickCor(idx){
+  const thumbs=document.querySelectorAll('.thumb');
+  if(thumbs[idx]) trocarFoto(idx,thumbs[idx]);
+  document.querySelectorAll('.cor-swatch').forEach((s,i)=>s.classList.toggle('on',i===idx));
+}
 function trocarFoto(idx,el){
   document.getElementById('foto-main').src=fotos[idx];
   document.querySelectorAll('.thumb').forEach(t=>t.classList.remove('on'));

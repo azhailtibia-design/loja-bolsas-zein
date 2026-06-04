@@ -581,7 +581,7 @@ footer{background:var(--navy-d);color:var(--white);padding:4rem 5vw 2rem;}
         <div class="dn-card-info"><span class="dn-card-badge">Mais Procurada</span><span class="dn-card-nome">Bag Dante</span><div class="dn-card-preco">R$ 129,90</div></div>
       </a>
       <a href="bag-marco.html" class="dn-card">
-        <div class="dn-card-img"><img src="Coleção dia dos namorados/bag2dentro.jpg" alt="Bag Marco" loading="lazy"></div>
+        <div class="dn-card-img"><img src="Coleção dia dos namorados/bag2cinza.jpg" alt="Bag Marco" loading="lazy"></div>
         <div class="dn-card-info"><span class="dn-card-badge">Presente Ideal</span><span class="dn-card-nome">Bag Marco</span><div class="dn-card-preco">R$ 99,90</div></div>
       </a>
     </div>
@@ -818,6 +818,8 @@ function pickC(pid,idx,el,e){
   const sid=pid.replace('-','');
   document.querySelectorAll(`#dots-${sid} .dot`).forEach(d=>d.classList.remove('on'));el.classList.add('on');
   const lb=document.getElementById(`cl-${sid}`);if(lb)lb.textContent=` ${p.cn[idx]}`;
+  // Troca foto do carousel para a cor correspondente
+  if(p.imagens && p.imagens.length>1 && idx<p.imagens.length) slideGo(sid,idx,e);
 }
 
 function renderP(cat){
@@ -828,7 +830,12 @@ function renderP(cat){
 function filterP(cat,btn){document.querySelectorAll('.fbt').forEach(b=>b.classList.remove('on'));btn.classList.add('on');renderP(cat);}
 
 function renderBS(){
-  document.getElementById('bscroll').innerHTML=BESTS.map(p=>`<div class="bsc"><div class="pci" style="aspect-ratio:3/4;position:relative"><div class="ph" style="height:100%"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(72,109,152,.3)" stroke-width=".8" style="width:30px;height:30px"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div><span class="brk">#${p.rank}</span></div><div class="pin"><div class="pnm">${p.name}</div><div class="ppr">${p.price}</div><button class="bwa bwaf" onclick="openWA('${p.name}','${p.id}','${p.cn[0]}','Mais Vendidas')">${waIco} Consultar</button></div></div>`).join('');
+  document.getElementById('bscroll').innerHTML=BESTS.map(p=>{
+    const img=p.imagens&&p.imagens[0]?`<img src="${p.imagens[0]}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;display:block;">`:`<div class="ph" style="height:100%"></div>`;
+    const link=p.pagina?`href="${p.pagina}"`:'';
+    const tag=p.pagina?'a':'div';
+    return`<${tag} class="bsc" ${link} style="text-decoration:none;color:inherit;"><div class="pci" style="aspect-ratio:3/4;position:relative;overflow:hidden;border-radius:var(--r-lg);">${img}<span class="brk">#${p.rank}</span></div><div class="pin"><div class="pnm">${p.name}</div><div class="ppr">${p.price}</div><button class="bwa bwaf" onclick="openWA('${p.name}','${p.id}','${p.cn[0]}','Mais Vendidas');event.preventDefault();">${waIco} Consultar</button></div></${tag}>`;
+  }).join('');
 }
 
 function openModal(name,sku,desc,price,colors,cnames){
