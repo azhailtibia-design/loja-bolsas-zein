@@ -46,14 +46,18 @@
       "descricao": "Charme e versatilidade em uma peça só. A Bolsa Siena acompanha você do trabalho ao jantar com elegância.",
       "pagina": "bolsa-siena.html",
       "imagens": [
+        "Coleção dia dos namorados/berem2.jpg",
         "Coleção dia dos namorados/berem2branca.jpg",
-        "Coleção dia dos namorados/berem2dentro.jpg",
-        "Coleção dia dos namorados/berem2usando.jpg"
+        "Coleção dia dos namorados/berem2dentro.jpg"
       ],
       "cores": [
         {
+          "hex": "#1C1C1C",
+          "nome": "Preta"
+        },
+        {
           "hex": "#F0ECE4",
-          "nome": "Branco"
+          "nome": "Branca"
         }
       ],
       "cn": []

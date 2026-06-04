@@ -128,17 +128,15 @@ footer{background:var(--navy);color:var(--white);text-align:center;padding:2rem 
   <div class="prod-wrap">
     <div class="galeria">
       <div class="main-foto">
-        <img id="foto-main" src="Coleção dia dos namorados/berem2branca.jpg" alt="Bolsa Siena"/>
+        <img id="foto-main" src="Coleção dia dos namorados/berem2.jpg" alt="Bolsa Siena"/>
       </div>
       <div class="thumb-row">
-        <div class="thumb on" onclick="trocarFoto(0,this)"><img src="Coleção dia dos namorados/berem2branca.jpg" alt="Branca"></div>
+        <div class="thumb on" onclick="trocarFoto(0,this)"><img src="Coleção dia dos namorados/berem2.jpg" alt="Preta"></div>
         <div class="thumb" onclick="trocarFoto(1,this)"><img src="Coleção dia dos namorados/berem2branca.jpg" alt="Branca"></div>
         <div class="thumb" onclick="trocarFoto(2,this)"><img src="Coleção dia dos namorados/berem2dentro.jpg" alt="Interior"></div>
-        <div class="thumb" onclick="trocarFoto(3,this)"><img src="Coleção dia dos namorados/berem2usando.jpg" alt="Usando"></div>
       </div>
-    </div>
-
-    <div class="infos">
+      </div>
+      <div class="infos">
       <span class="badge rose">Mais Procurada</span>
       <h1 class="prod-nome">Bolsa Siena</h1>
       <p class="prod-ref">Ref. BZ-002 · Coleção Dia dos Namorados 2025</p>
@@ -147,7 +145,7 @@ footer{background:var(--navy);color:var(--white);text-align:center;padding:2rem 
       <div class="divider"></div>
       <p class="prod-desc">Versátil e charmosa, a Bolsa Siena foi pensada para mulheres que não abrem mão do estilo em nenhum momento. Do trabalho ao jantar a dois, ela se adapta com elegância. Disponível em duas cores para combinar com qualquer look — o presente perfeito para quem você ama.</p>
       <div class="prod-destaque">"Versatilidade que encanta — do trabalho ao jantar romântico."</div>
-      <div class="cor-label">Cores disponíveis</div><div class="cor-box"><div class="cor-item" onclick="pickCor(0)" style="cursor:pointer;"><div class="cor-swatch on" style="background:#F0ECE4;box-shadow:0 0 0 1px #ccc;"></div><span class="cor-nome">Branca</span></div></div>
+      <div class="cor-label">Cores disponíveis</div><div class="cor-box"><div class="cor-item" onclick="pickCor(0)" style="cursor:pointer;"><div class="cor-swatch on" style="background:#1C1C1C;"></div><span class="cor-nome">Preta</span></div><div class="cor-item" onclick="pickCor(1)" style="cursor:pointer;"><div class="cor-swatch" style="background:#F0ECE4;box-shadow:0 0 0 1px #ccc;"></div><span class="cor-nome">Branca</span></div></div>
       <div class="beneficios">
         <div class="ben-titulo">Por que você vai amar</div>
         <ul class="ben-lista">
@@ -177,7 +175,7 @@ footer{background:var(--navy);color:var(--white);text-align:center;padding:2rem 
       <div class="rel-info"><div class="rel-nome">Bolsa Capri</div><div class="rel-preco">R$ 99,90</div></div>
     </a>
     <a href="bag-marco.html" class="rel-card">
-      <div class="rel-img">img src="Coleção dia dos namorados/bag2cinza.jpg" alt="Bag Marco" loading="lazy"></div>
+      <div class="rel-img"><img src="Coleção dia dos namorados/bag2cinza.jpg" alt="Bag Marco" loading="lazy"></div>
       <div class="rel-info"><div class="rel-nome">Bag Marco</div><div class="rel-preco">R$ 99,90</div></div>
     </a>
   </div>
@@ -187,7 +185,7 @@ footer{background:var(--navy);color:var(--white);text-align:center;padding:2rem 
 <footer>© 2025 ZEIN Bolsas · Curitiba — Shopping Cidade & Shopping Palladium</footer>
 
 <script>
-const fotos=['Coleção dia dos namorados/berem2branca.jpg','Coleção dia dos namorados/berem2dentro.jpg','Coleção dia dos namorados/berem2usando.jpg'];
+const fotos=['Coleção dia dos namorados/berem2.jpg','Coleção dia dos namorados/berem2branca.jpg','Coleção dia dos namorados/berem2dentro.jpg'];
 
 function pickCor(idx){
   const thumbs=document.querySelectorAll('.thumb');
