@@ -18,10 +18,22 @@
         "Coleção dia dos namorados/berem1-modelo.jpg"
       ],
       "cores": [
-        { "hex": "#C4A882", "nome": "Bege" },
-        { "hex": "#F0ECE4", "nome": "Branca" },
-        { "hex": "#1C1C1C", "nome": "Preta" },
-        { "hex": "#6B4226", "nome": "Marrom" }
+        {
+          "hex": "#C4A882",
+          "nome": "Bege"
+        },
+        {
+          "hex": "#F0ECE4",
+          "nome": "Branca"
+        },
+        {
+          "hex": "#1C1C1C",
+          "nome": "Preta"
+        },
+        {
+          "hex": "#6B4226",
+          "nome": "Marrom"
+        }
       ]
     },
     {
@@ -34,15 +46,17 @@
       "descricao": "Charme e versatilidade em uma peça só. A Bolsa Siena acompanha você do trabalho ao jantar com elegância.",
       "pagina": "bolsa-siena.html",
       "imagens": [
-        "Coleção dia dos namorados/berem2.jpg",
         "Coleção dia dos namorados/berem2branca.jpg",
         "Coleção dia dos namorados/berem2dentro.jpg",
         "Coleção dia dos namorados/berem2usando.jpg"
       ],
       "cores": [
-        { "hex": "#C4A882", "nome": "Natural" },
-        { "hex": "#F0ECE4", "nome": "Branco" }
-      ]
+        {
+          "hex": "#F0ECE4",
+          "nome": "Branco"
+        }
+      ],
+      "cn": []
     },
     {
       "id": "BZ-003",
@@ -56,13 +70,18 @@
       "imagens": [
         "Coleção dia dos namorados/berem3off.jpg",
         "Coleção dia dos namorados/berem3branca.jpg",
-        "Coleção dia dos namorados/berem3.jpg",
         "Coleção dia dos namorados/berem3dentro.jpg",
         "Coleção dia dos namorados/berem3usando.jpg"
       ],
       "cores": [
-        { "hex": "#E8E0D5", "nome": "Off-White" },
-        { "hex": "#F0ECE4", "nome": "Branco" }
+        {
+          "hex": "#E8E0D5",
+          "nome": "Off-White"
+        },
+        {
+          "hex": "#F0ECE4",
+          "nome": "Branco"
+        }
       ]
     },
     {
@@ -78,12 +97,17 @@
         "Coleção dia dos namorados/berem4preta.jpg",
         "Coleção dia dos namorados/berem4branca.jpg",
         "Coleção dia dos namorados/berem4dentro.jpg",
-        "Coleção dia dos namorados/berem4.jpg",
         "Coleção dia dos namorados/berem4usando.jpg"
       ],
       "cores": [
-        { "hex": "#1C1C1C", "nome": "Preto" },
-        { "hex": "#F0ECE4", "nome": "Branco" }
+        {
+          "hex": "#1C1C1C",
+          "nome": "Preto"
+        },
+        {
+          "hex": "#F0ECE4",
+          "nome": "Branco"
+        }
       ]
     },
     {
@@ -100,13 +124,21 @@
         "Coleção dia dos namorados/berem5preta.jpg",
         "Coleção dia dos namorados/berem5café.jpg",
         "Coleção dia dos namorados/berem5dentro.jpg",
-        "Coleção dia dos namorados/berem5.jpg",
         "Coleção dia dos namorados/berem5usando.jpg"
       ],
       "cores": [
-        { "hex": "#F0ECE4", "nome": "Branco" },
-        { "hex": "#1C1C1C", "nome": "Preto" },
-        { "hex": "#6B4226", "nome": "Café" }
+        {
+          "hex": "#F0ECE4",
+          "nome": "Branco"
+        },
+        {
+          "hex": "#1C1C1C",
+          "nome": "Preto"
+        },
+        {
+          "hex": "#6B4226",
+          "nome": "Café"
+        }
       ]
     },
     {
@@ -124,12 +156,25 @@
         "Coleção dia dos namorados/berem6preta.jpg",
         "Coleção dia dos namorados/berem6marrom.jpg",
         "Coleção dia dos namorados/berem6dentro.jpg",
-        "Coleção dia dos namorados/berem6usando.jpg",
-        "Coleção dia dos namorados/berem6.jpg"
+        "Coleção dia dos namorados/berem6usando.jpg"
       ],
       "cores": [
-        { "hex": "#1C1C1C", "nome": "Preto" },
-        { "hex": "#F0ECE4", "nome": "Branco" }
+        {
+          "hex": "#C8AA8C",
+          "nome": "Bege"
+        },
+        {
+          "hex": "#F0ECE4",
+          "nome": "Branca"
+        },
+        {
+          "hex": "#1C1C1C",
+          "nome": "Preta"
+        },
+        {
+          "hex": "#6B4226",
+          "nome": "Marrom"
+        }
       ]
     },
     {
@@ -147,12 +192,17 @@
         "Coleção dia dos namorados/bag1tras.jpg",
         "Coleção dia dos namorados/bag1dentro.jpg",
         "Coleção dia dos namorados/bag1lado.jpg",
-        "Coleção dia dos namorados/bag1usando.jpg",
-        "Coleção dia dos namorados/bag1.jpg"
+        "Coleção dia dos namorados/bag1usando.jpg"
       ],
       "cores": [
-        { "hex": "#1C1C1C", "nome": "Preto" },
-        { "hex": "#2C5F2E", "nome": "Verde" }
+        {
+          "hex": "#1C1C1C",
+          "nome": "Preto"
+        },
+        {
+          "hex": "#2C5F2E",
+          "nome": "Verde"
+        }
       ]
     },
     {
@@ -168,19 +218,33 @@
         "Coleção dia dos namorados/bag2cinza.jpg",
         "Coleção dia dos namorados/bag2preta.jpg",
         "Coleção dia dos namorados/bag2dourada.jpg",
-        "Coleção dia dos namorados/bag2.jpg",
         "Coleção dia dos namorados/bag2tras.jpg",
         "Coleção dia dos namorados/bag2dentro.jpg",
         "Coleção dia dos namorados/bag2detalhe.jpg",
         "Coleção dia dos namorados/bag2usando.jpg"
       ],
       "cores": [
-        { "hex": "#C4A882", "nome": "Natural" },
-        { "hex": "#1C1C1C", "nome": "Preto" },
-        { "hex": "#9E9E9E", "nome": "Cinza" },
-        { "hex": "#C9A84C", "nome": "Dourada" }
-      ]
+        {
+          "hex": "#1C1C1C",
+          "nome": "Preto"
+        },
+        {
+          "hex": "#9E9E9E",
+          "nome": "Cinza"
+        },
+        {
+          "hex": "#C9A84C",
+          "nome": "Dourada"
+        }
+      ],
+      "cn": []
     }
   ],
-  "maisVendidos": ["BZ-005", "BZ-007", "BZ-003", "BZ-004", "BZ-001"]
+  "maisVendidos": [
+    "BZ-005",
+    "BZ-007",
+    "BZ-003",
+    "BZ-004",
+    "BZ-001"
+  ]
 }

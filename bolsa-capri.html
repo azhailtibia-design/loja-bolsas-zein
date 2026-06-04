@@ -149,9 +149,7 @@ footer{background:var(--navy);color:var(--white);text-align:center;padding:2rem 
         <div class="thumb" onclick="trocarFoto(5,this)">
           <img src="Coleção dia dos namorados/berem6usando.jpg" alt="Usando">
         </div>
-        <div class="thumb" onclick="trocarFoto(6,this)">
-          <img src="Coleção dia dos namorados/berem6.jpg" alt="Foto geral">
-        </div>
+
       </div>
     </div>
 
@@ -164,19 +162,27 @@ footer{background:var(--navy);color:var(--white);text-align:center;padding:2rem 
 
       <div class="divider"></div>
 
-      <p class="prod-desc">Leve como a brisa do Mediterrâneo, a Bolsa Capri encanta pela simplicidade sofisticada. Com 6 fotos mostrando cada detalhe — incluindo como ela fica sendo usada — você vai se apaixonar antes mesmo de segurar. Disponível em Preto e Branco, ela é a escolha certeira para quem ama estilo descomplicado com muito charme. Presente que surpreende pelo preço acessível e beleza incomparável.</p>
+      <p class="prod-desc">Leve como a brisa do Mediterrâneo, a Bolsa Capri encanta pela simplicidade sofisticada. Com 6 fotos mostrando cada detalhe — incluindo como ela fica sendo usada — você vai se apaixonar antes mesmo de segurar. Disponível em Bege, Branca, Preta e Marrom, ela é a escolha certeira para quem ama estilo descomplicado com muito charme. Presente que surpreende pelo preço acessível e beleza incomparável.</p>
 
       <div class="prod-destaque">Leveza mediterrânea com sofisticação europeia — a surpresa da coleção.</div>
 
       <p class="cor-label">Cores disponíveis</p>
       <div class="cor-box">
-        <div class="cor-item" onclick="pickCor(0)" style="cursor:pointer;">>
-          <div class="cor-swatch on" style="background:#1C1C1C;"></div>
-          <span class="cor-nome">Preto</span>
+        <div class="cor-item" onclick="pickCor(0)" style="cursor:pointer;">
+          <div class="cor-swatch on" style="background:#C8AA8C;"></div>
+          <span class="cor-nome">Bege</span>
         </div>
-        <div class="cor-item" onclick="pickCor(1)" style="cursor:pointer;">>
+        <div class="cor-item" onclick="pickCor(1)" style="cursor:pointer;">
           <div class="cor-swatch" style="background:#F0ECE4;"></div>
-          <span class="cor-nome">Branco</span>
+          <span class="cor-nome">Branca</span>
+        </div>
+        <div class="cor-item" onclick="pickCor(2)" style="cursor:pointer;">
+          <div class="cor-swatch" style="background:#1C1C1C;"></div>
+          <span class="cor-nome">Preta</span>
+        </div>
+        <div class="cor-item" onclick="pickCor(3)" style="cursor:pointer;">
+          <div class="cor-swatch" style="background:#6B4226;"></div>
+          <span class="cor-nome">Marrom</span>
         </div>
       </div>
 
@@ -184,7 +190,7 @@ footer{background:var(--navy);color:var(--white);text-align:center;padding:2rem 
         <p class="ben-titulo">Por que você vai amar</p>
         <ul class="ben-lista">
           <li>6 ângulos de visualização</li>
-          <li>Disponível em Preto e Branco</li>
+          <li>Disponível em Bege, Branca, Preta e Marrom</li>
           <li>Design leve e moderno</li>
           <li>Ideal para uso diário</li>
           <li>Embalagem especial para presente</li>
@@ -205,7 +211,7 @@ footer{background:var(--navy);color:var(--white);text-align:center;padding:2rem 
     <div class="rel-grid">
       <a href="bolsa-siena.html" class="rel-card">
         <div class="rel-img">
-          <img src="Coleção dia dos namorados/berem2.jpg" alt="Bolsa Siena" loading="lazy">
+          <img src="Coleção dia dos namorados/berem2branca.jpg" alt="Bolsa Siena" loading="lazy">
         </div>
         <div class="rel-info">
           <p class="rel-nome">Bolsa Siena</p>
@@ -214,7 +220,7 @@ footer{background:var(--navy);color:var(--white);text-align:center;padding:2rem 
       </a>
       <a href="bag-marco.html" class="rel-card">
         <div class="rel-img">
-          <img src="Coleção dia dos namorados/bag2dentro.jpg" alt="Bag Marco" loading="lazy">
+          <img src="Coleção dia dos namorados/bag2cinza.jpg" alt="Bag Marco" loading="lazy">
         </div>
         <div class="rel-info">
           <p class="rel-nome">Bag Marco</p>
@@ -235,7 +241,7 @@ footer{background:var(--navy);color:var(--white);text-align:center;padding:2rem 
 </main>
 
 <footer>
-  &copy; 2024 ZEIN Bolsas — Todos os direitos reservados
+  &copy; 2026 ZEIN Bolsas — Todos os direitos reservados
 </footer>
 
 <script>
@@ -245,8 +251,7 @@ const fotos=[
   'Coleção dia dos namorados/berem6preta.jpg',
   'Coleção dia dos namorados/berem6marrom.jpg',
   'Coleção dia dos namorados/berem6dentro.jpg',
-  'Coleção dia dos namorados/berem6usando.jpg',
-  'Coleção dia dos namorados/berem6.jpg'
+  'Coleção dia dos namorados/berem6usando.jpg'
 ];
 
 function pickCor(idx){
