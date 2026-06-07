@@ -141,15 +141,6 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1;}
 .lc-r{display:flex;flex-direction:column;gap:2px;}
 .lc-r .lc{flex:1;}
 
-/* LANÇAMENTO DESTAQUE */
-.lc-destaque{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;max-width:960px;margin:0 auto;}
-.lc-dest-main{aspect-ratio:3/4;border-radius:var(--r-lg);overflow:hidden;position:relative;background:var(--g1);}
-.lc-dest-thumbs{display:flex;gap:.5rem;margin-top:.65rem;flex-wrap:wrap;}
-.lc-dt{width:68px;aspect-ratio:1;border-radius:var(--r-md);overflow:hidden;cursor:pointer;border:2px solid transparent;transition:border-color .2s;flex-shrink:0;}
-.lc-dt.on{border-color:var(--navy);}
-.lc-dt img{width:100%;height:100%;object-fit:cover;display:block;}
-.lc-dest-info{padding:.5rem 0;}
-@media(max-width:768px){.lc-destaque{grid-template-columns:1fr;gap:2rem;}}
 
 /* PROD GRID */
 .fb{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:2.5rem;}
@@ -407,7 +398,6 @@ footer{background:var(--navy-d);color:var(--white);padding:4rem 5vw 2rem;}
       </svg>
     </a>
     <ul class="nl">
-      <li><a href="#lancamentos">Lançamentos</a></li>
       <li><a href="#catalogo">Catálogo</a></li>
       <li><a href="#mais-vendidos">Mais Vendidas</a></li>
       <li><a href="#lojas">Lojas</a></li>
@@ -419,7 +409,6 @@ footer{background:var(--navy-d);color:var(--white);padding:4rem 5vw 2rem;}
 
 <div class="mnav" id="mnav">
   <button class="mc" onclick="toggleMenu()">✕</button>
-  <a href="#lancamentos" onclick="toggleMenu()">Lançamentos</a>
   <a href="#dia-dos-namorados" onclick="toggleMenu()">❤ Dia dos Namorados</a>
   <a href="#catalogo" onclick="toggleMenu()">Catálogo</a>
   <a href="#mais-vendidos" onclick="toggleMenu()">Mais Vendidas</a>
@@ -473,49 +462,6 @@ footer{background:var(--navy-d);color:var(--white);padding:4rem 5vw 2rem;}
   <div class="vi-item"><div class="vi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><div class="vi-tx"><strong>Novidades semanais</strong><span>Coleções sempre frescas</span></div></div>
 </div></div>
 
-<!-- LANÇAMENTOS -->
-<section id="lancamentos"><div class="sec">
-  <div class="sechd rv">
-    <span class="ey">Edição Especial 2026</span>
-    <h2 class="st">Coleção <em class="si">Dia dos Namorados</em></h2>
-    <div class="dv"></div>
-    <p class="ss">Peças criadas para encantar. Presenteie com sofisticação e elegância — atendimento exclusivo via WhatsApp.</p>
-  </div>
-  <div class="lc-destaque rv">
-    <div class="lc-dest-fotos">
-      <div class="lc-dest-main" id="dest-main">
-        <img src="Coleção dia dos namorados/berem1- bege.jpg" alt="Bolsa Verona" id="dest-img" style="width:100%;height:100%;object-fit:cover;display:block;transition:opacity .35s;">
-        <span class="lc-nb" style="background:var(--navy);">Lançamento</span>
-      </div>
-      <div class="lc-dest-thumbs">
-        <div class="lc-dt on" onclick="destFoto(0,this)"><img src="Coleção dia dos namorados/berem1- bege.jpg" alt="1"></div>
-        <div class="lc-dt" onclick="destFoto(1,this)"><img src="Coleção dia dos namorados/berem1-branca.jpg" alt="2"></div>
-        <div class="lc-dt" onclick="destFoto(2,this)"><img src="Coleção dia dos namorados/berem1- preta.jpg" alt="3"></div>
-        <div class="lc-dt" onclick="destFoto(3,this)"><img src="Coleção dia dos namorados/berem1-marrom.jpg" alt="4"></div>
-      </div>
-    </div>
-    <div class="lc-dest-info">
-      <span class="ey">Destaque da coleção</span>
-      <h3 style="font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.4rem);color:var(--navy);font-weight:400;line-height:1.1;margin-bottom:.75rem;">Bolsa Verona</h3>
-      <div class="dv"></div>
-      <p style="font-size:.95rem;color:var(--g4);line-height:1.85;margin-bottom:1.5rem;">Criada para mulheres que valorizam o bom gosto, a Bolsa Verona combina linhas refinadas com materiais de alta qualidade. Seu design atemporal transita da rotina às ocasiões especiais — perfeita para presentear quem você ama neste Dia dos Namorados.</p>
-      <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;flex-wrap:wrap;">
-        <div style="display:flex;align-items:center;gap:.4rem;cursor:pointer;" onclick="destFoto(0,document.querySelectorAll('.lc-dt')[0])"><div style="width:18px;height:18px;border-radius:50%;background:#C8AA8C;border:1.5px solid #ccc;"></div><span style="font-size:.82rem;color:var(--g4);">Bege</span></div>
-        <div style="display:flex;align-items:center;gap:.4rem;cursor:pointer;" onclick="destFoto(1,document.querySelectorAll('.lc-dt')[1])"><div style="width:18px;height:18px;border-radius:50%;background:#F0ECE4;border:1.5px solid #ccc;"></div><span style="font-size:.82rem;color:var(--g4);">Branca</span></div>
-        <div style="display:flex;align-items:center;gap:.4rem;cursor:pointer;" onclick="destFoto(2,document.querySelectorAll('.lc-dt')[2])"><div style="width:18px;height:18px;border-radius:50%;background:#1C1C1C;border:1.5px solid #ccc;"></div><span style="font-size:.82rem;color:var(--g4);">Preta</span></div>
-        <div style="display:flex;align-items:center;gap:.4rem;cursor:pointer;" onclick="destFoto(3,document.querySelectorAll('.lc-dt')[3])"><div style="width:18px;height:18px;border-radius:50%;background:#6B4226;border:1.5px solid #ccc;"></div><span style="font-size:.82rem;color:var(--g4);">Marrom</span></div>
-      </div>
-      <div style="font-family:var(--serif);font-size:2rem;color:var(--navy);font-weight:500;margin:.75rem 0 1.5rem;">R$ 179,90</div>
-      <div style="display:flex;gap:.85rem;flex-wrap:wrap;">
-        <a href="bolsa-verona.html" class="btn b-navy">Ver detalhes</a>
-        <a href="https://wa.me/5541998114832?text=Olá!%20Tenho%20interesse%20na%20Bolsa%20Verona%20que%20vi%20na%20coleção%20especial%20de%20Dia%20dos%20Namorados%20da%20Bolsas%20Zein." target="_blank" class="bwa">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
-          Consultar
-        </a>
-      </div>
-    </div>
-  </div>
-</div></section>
 
 <!-- CATÁLOGO -->
 <div id="catalogo" class="bg-off"><div class="sec">
@@ -716,7 +662,7 @@ footer{background:var(--navy-d);color:var(--white);padding:4rem 5vw 2rem;}
         <a href="https://wa.me/5541998114832" target="_blank" class="fsb" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.114.553 4.098 1.524 5.823L0 24l6.358-1.496A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.876 0-3.638-.49-5.162-1.348l-.368-.217-3.776.888.92-3.674-.239-.379A9.957 9.957 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></a>
       </div>
     </div>
-    <div><div class="fct">Navegação</div><ul class="fls"><li><a href="#lancamentos">Lançamentos</a></li><li><a href="#catalogo">Catálogo</a></li><li><a href="#mais-vendidos">Mais Vendidas</a></li><li><a href="#depoimentos">Depoimentos</a></li><li><a href="#lojas">Nossas Lojas</a></li></ul></div>
+    <div><div class="fct">Navegação</div><ul class="fls"><li><a href="#catalogo">Catálogo</a></li><li><a href="#mais-vendidos">Mais Vendidas</a></li><li><a href="#depoimentos">Depoimentos</a></li><li><a href="#lojas">Nossas Lojas</a></li></ul></div>
     <div><div class="fct">Categorias</div><ul class="fls"><li><a href="#catalogo">Bolsas Femininas</a></li><li><a href="#catalogo">Carteiras</a></li><li><a href="#catalogo">Mochilas</a></li><li><a href="#catalogo">Clutch & Nécessaires</a></li></ul></div>
     <div><div class="fct">Contato</div><ul class="fls"><li><a href="https://wa.me/5541998114832">(41) 99811-4832</a></li><li><a href="https://instagram.com/bolsaszein">@bolsaszein</a></li><li><a href="#lojas">Shopping Cidade</a></li><li><a href="#lojas">Shopping Palladium</a></li><li><a href="#faq">Dúvidas</a></li></ul></div>
   </div>
@@ -875,12 +821,30 @@ function initRV(){
   document.querySelectorAll('.rv:not(.in)').forEach(el=>obs.observe(el));
 }
 
-const destFotos=['Coleção dia dos namorados/berem1- bege.jpg','Coleção dia dos namorados/berem1-branca.jpg','Coleção dia dos namorados/berem1- preta.jpg','Coleção dia dos namorados/berem1-marrom.jpg'];
-function destFoto(idx,el){
-  document.getElementById('dest-img').src=destFotos[idx];
-  document.querySelectorAll('.lc-dt').forEach(t=>t.classList.remove('on'));
-  el.classList.add('on');
-}
+
+/* SWIPE em carrosséis do catálogo */
+(function(){
+  let sx=0,sy=0;
+  document.addEventListener('touchstart',function(e){
+    const car=e.target.closest('.carousel');
+    if(!car)return;
+    sx=e.touches[0].clientX;
+    sy=e.touches[0].clientY;
+  },{passive:true});
+  document.addEventListener('touchend',function(e){
+    const car=e.target.closest('.carousel');
+    if(!car||sx===0)return;
+    const dx=sx-e.changedTouches[0].clientX;
+    const dy=sy-e.changedTouches[0].clientY;
+    if(Math.abs(dx)>Math.abs(dy)&&Math.abs(dx)>45){
+      const sid=car.id.replace('car-','');
+      const total=car.querySelectorAll('.cslide').length;
+      if(dx>0)slideNext(sid,total,null);
+      else slidePrev(sid,total,null);
+    }
+    sx=0;sy=0;
+  },{passive:true});
+})();
 
 function slideSet(sid,idx,total){
   const car=document.getElementById('car-'+sid);if(!car)return;
