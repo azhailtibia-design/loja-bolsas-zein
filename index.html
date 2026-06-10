@@ -833,4 +833,9 @@ function slideSet(sid,idx,total){
   car.dataset.idx=idx;
 }
 function slideNext(sid,total,e){e&&e.stopPropagation();const car=document.getElementById('car-'+sid);if(!car)return;const idx=(+car.dataset.idx+1)%total;slideSet(sid,idx,total);}
-function slidePrev(sid,total,e){e&&e.stopPropagation();const car=document.getElementById('car-'+sid);if(!car)return;const idx=(+car.dataset.idx-1+total)%total;slideSet(sid,idx,total);}
+function slidePrev(sid,total,e){e&&e.stopPropagation();const car=document.getElementById('car-'+sid);if(!car)return;const idx=(+car.dataset.idx-1+total)%total;slideSet(sid,idx,total);}function slideGo(sid,idx,e){if(e&&e.stopPropagation)e.stopPropagation();const car=document.getElementById('car-'+sid);if(!car)return;const total=car.querySelectorAll('.cslide').length;slideSet(sid,idx,total);}
+
+carregarProdutos();
+</script>
+</body>
+</html>
