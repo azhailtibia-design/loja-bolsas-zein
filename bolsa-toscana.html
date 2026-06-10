@@ -278,7 +278,7 @@ footer{background:var(--navy-d,#072B50);color:var(--white);text-align:center;pad
 </div>
 </div>
 
-<footer>© 2025 ZEIN Bolsas · CNPJ 22.797.655/0001-75 · Curitiba — PR<br><span style="font-size:.72rem;opacity:.6;display:inline-flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-top:.4rem;"><a href="sobre.html" style="color:inherit;">Sobre Nós</a> · <a href="politica-troca.html" style="color:inherit;">Política de Troca</a> · <a href="politica-privacidade.html" style="color:inherit;">Privacidade</a></span></footer>
+<footer>© 2026 ZEIN Bolsas · CNPJ 22.797.655/0001-75 · Curitiba — PR<br><span style="font-size:.72rem;opacity:.6;display:inline-flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-top:.4rem;"><a href="sobre.html" style="color:inherit;">Sobre Nós</a> · <a href="politica-troca.html" style="color:inherit;">Política de Troca</a> · <a href="politica-privacidade.html" style="color:inherit;">Privacidade</a></span></footer>
 
 <script>
 // ── Mapeamento de cores (índice 0–4 = cores; 5–6 = extras) ──────────────
@@ -351,103 +351,6 @@ window.addEventListener('scroll', () => {
   mf.addEventListener('touchend', function(e){
     var dx = sx - e.changedTouches[0].clientX;
     var dy = sy - e.changedTouches[0].clientY;
-    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 45) {
-      var thumbs = Array.from(document.querySelectorAll('.thumb'));
-      var cur = thumbs.findIndex(function(t){ return t.classList.contains('on'); });
-      var next = dx > 0 ? Math.min(cur + 1, thumbs.length - 1) : Math.max(cur - 1, 0);
-      if (next !== cur) trocarFoto(next, thumbs[next]);
-    }
-    sx = 0; sy = 0;
-  }, { passive: true });
-})();
-</script>
-</body>
-</html>
-
-      <a href="bolsa-capri.html" class="rel-card">
-        <div class="rel-img"><img src="produtos/capri-bz006/berem6bege.jpg" alt="Bolsa Capri" loading="lazy"></div>
-        <div class="rel-info"><div class="rel-nome">Bolsa Capri</div><div class="rel-preco">R$ 149,90</div></div>
-      </a>
-    </div>
-  </div>
-</div>
-</div>
-
-<footer>© 2025 ZEIN Bolsas · CNPJ 22.797.655/0001-75 · Curitiba — PR<br><span style="font-size:.72rem;opacity:.6;display:inline-flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-top:.4rem;"><a href="sobre.html" style="color:inherit;">Sobre Nós</a> · <a href="politica-troca.html" style="color:inherit;">Política de Troca</a> · <a href="politica-privacidade.html" style="color:inherit;">Privacidade</a></span></footer>
-
-<script>
-const cores = [
-  { nome: 'Branca', src: 'produtos/toscana-bz005/berem5branca.jpg' },
-  { nome: 'Café',   src: 'produtos/toscana-bz005/berem5café.jpg'  },
-  { nome: 'Khaki',  src: 'produtos/toscana-bz005/berem5khaki.jpg' },
-  { nome: 'Marrom', src: 'produtos/toscana-bz005/berem5marrom.jpg'},
-  { nome: 'Preta',  src: 'produtos/toscana-bz005/berem5preta.jpg' },
-];
-const fotos = [
-  'produtos/toscana-bz005/berem5branca.jpg',
-  'produtos/toscana-bz005/berem5café.jpg',
-  'produtos/toscana-bz005/berem5khaki.jpg',
-  'produtos/toscana-bz005/berem5marrom.jpg',
-  'produtos/toscana-bz005/berem5preta.jpg',
-  'produtos/toscana-bz005/berem5dentro.jpg',
-  'produtos/toscana-bz005/berem5usando.jpg',
-];
-
-function trocarFoto(idx, el) {
-  var img = document.getElementById('foto-main');
-  img.src = fotos[idx];
-  img.alt = el.title || 'Bolsa Toscana';
-  document.querySelectorAll('.thumb').forEach(function(t){ t.classList.remove('on'); });
-  el.classList.add('on');
-  if (idx < cores.length) sincronizarCor(idx);
-}
-
-function pickCor(idx, el) {
-  document.querySelectorAll('.cor-item').forEach(function(c){ c.classList.remove('on'); });
-  el.classList.add('on');
-  document.getElementById('cor-ativa').textContent = cores[idx].nome;
-  var thumbs = document.querySelectorAll('.thumb');
-  if (thumbs[idx]) trocarFoto(idx, thumbs[idx]);
-}
-
-function sincronizarCor(idx) {
-  document.querySelectorAll('.cor-item').forEach(function(c, i){ c.classList.toggle('on', i === idx); });
-  if (idx < cores.length) document.getElementById('cor-ativa').textContent = cores[idx].nome;
-}
-
-function ajustarTopBar() {
-  var ann = document.querySelector('.ann');
-  var hdr = document.getElementById('hdr');
-  if (ann && hdr) hdr.style.top = ann.offsetHeight + 'px';
-}
-ajustarTopBar();
-window.addEventListener('resize', ajustarTopBar);
-window.addEventListener('scroll', function(){
-  var annH = (document.querySelector('.ann') || {}).offsetHeight || 36;
-  document.getElementById('hdr').classList.toggle('sc', window.scrollY > annH + 20);
-});
-
-(function(){
-  var mf = document.querySelector('.main-foto');
-  if (!mf) return;
-  var sx = 0, sy = 0;
-  mf.addEventListener('touchstart', function(e){ sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
-  mf.addEventListener('touchend', function(e){
-    var dx = sx - e.changedTouches[0].clientX;
-    var dy = sy - e.changedTouches[0].clientY;
-    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 45) {
-      var thumbs = Array.from(document.querySelectorAll('.thumb'));
-      var cur = thumbs.findIndex(function(t){ return t.classList.contains('on'); });
-      var next = dx > 0 ? Math.min(cur + 1, thumbs.length - 1) : Math.max(cur - 1, 0);
-      if (next !== cur) trocarFoto(next, thumbs[next]);
-    }
-    sx = 0; sy = 0;
-  }, { passive: true });
-})();
-</script>
-</body>
-</html>
-sy - e.changedTouches[0].clientY;
     if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 45) {
       var thumbs = Array.from(document.querySelectorAll('.thumb'));
       var cur = thumbs.findIndex(function(t){ return t.classList.contains('on'); });

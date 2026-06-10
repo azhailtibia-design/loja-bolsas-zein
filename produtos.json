@@ -125,23 +125,33 @@
       "pagina": "bolsa-toscana.html",
       "imagens": [
         "produtos/toscana-bz005/berem5branca.jpg",
-        "produtos/toscana-bz005/berem5preta.jpg",
         "produtos/toscana-bz005/berem5café.jpg",
+        "produtos/toscana-bz005/berem5khaki.jpg",
+        "produtos/toscana-bz005/berem5marrom.jpg",
+        "produtos/toscana-bz005/berem5preta.jpg",
         "produtos/toscana-bz005/berem5dentro.jpg",
         "produtos/toscana-bz005/berem5usando.jpg"
       ],
       "cores": [
         {
           "hex": "#F0ECE4",
-          "nome": "Branco"
+          "nome": "Branca"
         },
         {
-          "hex": "#1C1C1C",
-          "nome": "Preto"
+          "hex": "#5C3317",
+          "nome": "Café"
+        },
+        {
+          "hex": "#8B7D5E",
+          "nome": "Khaki"
         },
         {
           "hex": "#6B4226",
-          "nome": "Café"
+          "nome": "Marrom"
+        },
+        {
+          "hex": "#1C1C1C",
+          "nome": "Preta"
         }
       ]
     },
