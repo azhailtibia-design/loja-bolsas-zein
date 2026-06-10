@@ -479,35 +479,35 @@ footer{background:var(--navy-d);color:var(--white);padding:4rem 5vw 2rem;}
     </div>
     <div class="dn-grid rv">
       <a href="bolsa-verona.html" class="dn-card">
-        <div class="dn-card-img"><img src="Coleção dia dos namorados/berem1- bege.jpg" alt="Bolsa Verona" loading="lazy"></div>
+        <div class="dn-card-img"><img src="produtos/verona-bz001/berem1- bege.jpg" alt="Bolsa Verona" loading="lazy"></div>
         <div class="dn-card-info"><span class="dn-card-badge">Lançamento</span><span class="dn-card-nome">Bolsa Verona</span><div class="dn-card-preco">R$ 179,90</div></div>
       </a>
       <a href="bolsa-siena.html" class="dn-card">
-        <div class="dn-card-img"><img src="Coleção dia dos namorados/berem2.jpg" alt="Bolsa Siena" loading="lazy"></div>
+        <div class="dn-card-img"><img src="produtos/siena-bz002/berem2.jpg" alt="Bolsa Siena" loading="lazy"></div>
         <div class="dn-card-info"><span class="dn-card-badge">Mais Procurada</span><span class="dn-card-nome">Bolsa Siena</span><div class="dn-card-preco">R$ 99,90</div></div>
       </a>
       <a href="bolsa-firenze.html" class="dn-card">
-        <div class="dn-card-img"><img src="Coleção dia dos namorados/berem3off.jpg" alt="Bolsa Firenze" loading="lazy"></div>
+        <div class="dn-card-img"><img src="produtos/firenze-bz003/berem3off.jpg" alt="Bolsa Firenze" loading="lazy"></div>
         <div class="dn-card-info"><span class="dn-card-badge">Presente Ideal</span><span class="dn-card-nome">Bolsa Firenze</span><div class="dn-card-preco">R$ 199,90</div></div>
       </a>
       <a href="bolsa-milano.html" class="dn-card">
-        <div class="dn-card-img"><img src="Coleção dia dos namorados/berem4preta.jpg" alt="Bolsa Milano" loading="lazy"></div>
+        <div class="dn-card-img"><img src="produtos/milano-bz004/berem4preta.jpg" alt="Bolsa Milano" loading="lazy"></div>
         <div class="dn-card-info"><span class="dn-card-badge">Favorita</span><span class="dn-card-nome">Bolsa Milano</span><div class="dn-card-preco">R$ 199,90</div></div>
       </a>
       <a href="bolsa-toscana.html" class="dn-card">
-        <div class="dn-card-img"><img src="Coleção dia dos namorados/berem5branca.jpg" alt="Bolsa Toscana" loading="lazy"></div>
+        <div class="dn-card-img"><img src="produtos/toscana-bz005/berem5branca.jpg" alt="Bolsa Toscana" loading="lazy"></div>
         <div class="dn-card-info"><span class="dn-card-badge">Edição Especial</span><span class="dn-card-nome">Bolsa Toscana</span><div class="dn-card-preco">R$ 149,90</div></div>
       </a>
       <a href="bolsa-capri.html" class="dn-card">
-        <div class="dn-card-img"><img src="Coleção dia dos namorados/berem6bege.jpg" alt="Bolsa Capri" loading="lazy"></div>
+        <div class="dn-card-img"><img src="produtos/capri-bz006/berem6bege.jpg" alt="Bolsa Capri" loading="lazy"></div>
         <div class="dn-card-info"><span class="dn-card-badge">Lançamento</span><span class="dn-card-nome">Bolsa Capri</span><div class="dn-card-preco">R$ 99,90</div></div>
       </a>
       <a href="bag-dante.html" class="dn-card">
-        <div class="dn-card-img"><img src="Coleção dia dos namorados/bag1preta.jpg" alt="Bag Dante" loading="lazy"></div>
+        <div class="dn-card-img"><img src="produtos/dante-bz007/bag1preta.jpg" alt="Bag Dante" loading="lazy"></div>
         <div class="dn-card-info"><span class="dn-card-badge">Mais Procurada</span><span class="dn-card-nome">Bag Dante</span><div class="dn-card-preco">R$ 129,90</div></div>
       </a>
       <a href="bag-marco.html" class="dn-card">
-        <div class="dn-card-img"><img src="Coleção dia dos namorados/bag2cinza.jpg" alt="Bag Marco" loading="lazy"></div>
+        <div class="dn-card-img"><img src="produtos/marco-bz008/bag2cinza.jpg" alt="Bag Marco" loading="lazy"></div>
         <div class="dn-card-info"><span class="dn-card-badge">Presente Ideal</span><span class="dn-card-nome">Bag Marco</span><div class="dn-card-preco">R$ 99,90</div></div>
       </a>
     </div>
@@ -834,10 +834,3 @@ function slideSet(sid,idx,total){
 }
 function slideNext(sid,total,e){e&&e.stopPropagation();const car=document.getElementById('car-'+sid);if(!car)return;const idx=(+car.dataset.idx+1)%total;slideSet(sid,idx,total);}
 function slidePrev(sid,total,e){e&&e.stopPropagation();const car=document.getElementById('car-'+sid);if(!car)return;const idx=(+car.dataset.idx-1+total)%total;slideSet(sid,idx,total);}
-function slideGo(sid,idx,e){e&&e.stopPropagation();const car=document.getElementById('car-'+sid);if(!car)return;slideSet(sid,idx,car.querySelectorAll('.cslide').length);}
-
-document.addEventListener('DOMContentLoaded',()=>{carregarProdutos();});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMod();});
-</script>
-</body>
-</html>

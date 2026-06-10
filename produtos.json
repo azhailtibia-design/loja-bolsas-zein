@@ -10,12 +10,12 @@
       "descricao": "Elegância italiana em cada detalhe. A Bolsa Verona é a escolha perfeita para quem deseja sofisticação no dia a dia.",
       "pagina": "bolsa-verona.html",
       "imagens": [
-        "Coleção dia dos namorados/berem1- bege.jpg",
-        "Coleção dia dos namorados/berem1-branca.jpg",
-        "Coleção dia dos namorados/berem1- preta.jpg",
-        "Coleção dia dos namorados/berem1-marrom.jpg",
-        "Coleção dia dos namorados/berem1-dentro.jpg",
-        "Coleção dia dos namorados/berem1-modelo.jpg"
+        "produtos/verona-bz001/berem1- bege.jpg",
+        "produtos/verona-bz001/berem1-branca.jpg",
+        "produtos/verona-bz001/berem1- preta.jpg",
+        "produtos/verona-bz001/berem1-marrom.jpg",
+        "produtos/verona-bz001/berem1-dentro.jpg",
+        "produtos/verona-bz001/berem1-modelo.jpg"
       ],
       "cores": [
         {
@@ -46,9 +46,9 @@
       "descricao": "Charme e versatilidade em uma peça só. A Bolsa Siena acompanha você do trabalho ao jantar com elegância.",
       "pagina": "bolsa-siena.html",
       "imagens": [
-        "Coleção dia dos namorados/berem2.jpg",
-        "Coleção dia dos namorados/berem2branca.jpg",
-        "Coleção dia dos namorados/berem2dentro.jpg"
+        "produtos/siena-bz002/berem2.jpg",
+        "produtos/siena-bz002/berem2branca.jpg",
+        "produtos/siena-bz002/berem2dentro.jpg"
       ],
       "cores": [
         {
@@ -72,10 +72,10 @@
       "descricao": "A mais sofisticada da coleção. A Bolsa Firenze foi criada para mulheres que apreciam o requinte e a beleza dos detalhes.",
       "pagina": "bolsa-firenze.html",
       "imagens": [
-        "Coleção dia dos namorados/berem3off.jpg",
-        "Coleção dia dos namorados/berem3branca.jpg",
-        "Coleção dia dos namorados/berem3dentro.jpg",
-        "Coleção dia dos namorados/berem3usando.jpg"
+        "produtos/firenze-bz003/berem3off.jpg",
+        "produtos/firenze-bz003/berem3branca.jpg",
+        "produtos/firenze-bz003/berem3dentro.jpg",
+        "produtos/firenze-bz003/berem3usando.jpg"
       ],
       "cores": [
         {
@@ -98,10 +98,10 @@
       "descricao": "Presença e poder. A Bolsa Milano combina linhas modernas com acabamento premium para a mulher contemporânea.",
       "pagina": "bolsa-milano.html",
       "imagens": [
-        "Coleção dia dos namorados/berem4preta.jpg",
-        "Coleção dia dos namorados/berem4branca.jpg",
-        "Coleção dia dos namorados/berem4dentro.jpg",
-        "Coleção dia dos namorados/berem4usando.jpg"
+        "produtos/milano-bz004/berem4preta.jpg",
+        "produtos/milano-bz004/berem4branca.jpg",
+        "produtos/milano-bz004/berem4dentro.jpg",
+        "produtos/milano-bz004/berem4usando.jpg"
       ],
       "cores": [
         {
@@ -124,11 +124,11 @@
       "descricao": "Inspirada nas colinas da Toscana, esta bolsa traz a beleza e serenidade italiana para o seu dia a dia com estilo.",
       "pagina": "bolsa-toscana.html",
       "imagens": [
-        "Coleção dia dos namorados/berem5branca.jpg",
-        "Coleção dia dos namorados/berem5preta.jpg",
-        "Coleção dia dos namorados/berem5café.jpg",
-        "Coleção dia dos namorados/berem5dentro.jpg",
-        "Coleção dia dos namorados/berem5usando.jpg"
+        "produtos/toscana-bz005/berem5branca.jpg",
+        "produtos/toscana-bz005/berem5preta.jpg",
+        "produtos/toscana-bz005/berem5café.jpg",
+        "produtos/toscana-bz005/berem5dentro.jpg",
+        "produtos/toscana-bz005/berem5usando.jpg"
       ],
       "cores": [
         {
@@ -155,12 +155,12 @@
       "descricao": "Leve como a brisa do Mediterrâneo. A Bolsa Capri é perfeita para quem busca estilo descomplicado com muito charme.",
       "pagina": "bolsa-capri.html",
       "imagens": [
-        "Coleção dia dos namorados/berem6bege.jpg",
-        "Coleção dia dos namorados/berem6branca.jpg",
-        "Coleção dia dos namorados/berem6preta.jpg",
-        "Coleção dia dos namorados/berem6marrom.jpg",
-        "Coleção dia dos namorados/berem6dentro.jpg",
-        "Coleção dia dos namorados/berem6usando.jpg"
+        "produtos/capri-bz006/berem6bege.jpg",
+        "produtos/capri-bz006/berem6branca.jpg",
+        "produtos/capri-bz006/berem6preta.jpg",
+        "produtos/capri-bz006/berem6marrom.jpg",
+        "produtos/capri-bz006/berem6dentro.jpg",
+        "produtos/capri-bz006/berem6usando.jpg"
       ],
       "cores": [
         {
@@ -191,12 +191,12 @@
       "descricao": "Espaçosa e elegante. A Bag Dante tem capacidade para o seu dia inteiro sem abrir mão do estilo e da sofisticação.",
       "pagina": "bag-dante.html",
       "imagens": [
-        "Coleção dia dos namorados/bag1preta.jpg",
-        "Coleção dia dos namorados/bag1verde.jpg",
-        "Coleção dia dos namorados/bag1tras.jpg",
-        "Coleção dia dos namorados/bag1dentro.jpg",
-        "Coleção dia dos namorados/bag1lado.jpg",
-        "Coleção dia dos namorados/bag1usando.jpg"
+        "produtos/dante-bz007/bag1preta.jpg",
+        "produtos/dante-bz007/bag1verde.jpg",
+        "produtos/dante-bz007/bag1tras.jpg",
+        "produtos/dante-bz007/bag1dentro.jpg",
+        "produtos/dante-bz007/bag1lado.jpg",
+        "produtos/dante-bz007/bag1usando.jpg"
       ],
       "cores": [
         {
@@ -219,13 +219,13 @@
       "descricao": "Delicado e sofisticado. A Bag Marco é o acessório que completa qualquer look com perfeição e leveza.",
       "pagina": "bag-marco.html",
       "imagens": [
-        "Coleção dia dos namorados/bag2cinza.jpg",
-        "Coleção dia dos namorados/bag2preta.jpg",
-        "Coleção dia dos namorados/bag2dourada.jpg",
-        "Coleção dia dos namorados/bag2tras.jpg",
-        "Coleção dia dos namorados/bag2dentro.jpg",
-        "Coleção dia dos namorados/bag2detalhe.jpg",
-        "Coleção dia dos namorados/bag2usando.jpg"
+        "produtos/marco-bz008/bag2cinza.jpg",
+        "produtos/marco-bz008/bag2preta.jpg",
+        "produtos/marco-bz008/bag2dourada.jpg",
+        "produtos/marco-bz008/bag2tras.jpg",
+        "produtos/marco-bz008/bag2dentro.jpg",
+        "produtos/marco-bz008/bag2detalhe.jpg",
+        "produtos/marco-bz008/bag2usando.jpg"
       ],
       "cores": [
         {

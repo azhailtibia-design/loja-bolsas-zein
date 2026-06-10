@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bolsa Toscana — Coleção Dia dos Namorados | ZEIN Bolsas</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Bolsa Toscana — 5 Cores | ZEIN Bolsas Curitiba</title>
+<meta name="description" content="Bolsa Toscana disponível em Branca, Café, Khaki, Marrom e Preta. R$ 149,90. Material 100% PU com forro interno. Frete grátis para Curitiba. ZEIN Bolsas."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
 :root{
   --navy:#0B3A69;--navy-d:#072B50;--navy-l:#14508F;
   --blue:#486D98;--blue-l:#6E92BB;
   --sky:#C8D9EE;--sky-lt:#EBF2FA;
-  --rose:#8B1A3A;--rose-l:#F9EEF1;
+  --rose:#8B1A3A;
   --white:#FFFFFF;--off:#F7F9FC;
   --g1:#EEF1F5;--g2:#CDD4DE;--g3:#8A96A8;--g4:#5A6475;
   --black:#111827;--wa:#25D366;
@@ -26,58 +29,83 @@ html{scroll-behavior:smooth;}
 body{font-family:var(--sans);background:var(--white);color:var(--black);-webkit-font-smoothing:antialiased;}
 a{text-decoration:none;color:inherit;}
 button{cursor:pointer;font-family:var(--sans);border:none;background:none;}
+
+/* ANNOUNCE */
 .ann{position:fixed;top:0;left:0;right:0;z-index:902;background:var(--navy);color:var(--white);text-align:center;padding:.6rem 1rem;font-size:.75rem;letter-spacing:.1em;font-weight:300;}
 .ann strong{font-weight:500;color:var(--sky);}
-#hdr{position:fixed;top:36px;left:0;right:0;z-index:900;padding:0 5vw;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--g1);}
+
+/* HEADER */
+#hdr{position:fixed;top:36px;left:0;right:0;z-index:900;padding:0 5vw;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--g1);transition:box-shadow .35s;}
 .ni{max-width:1360px;margin:0 auto;height:64px;display:flex;align-items:center;justify-content:space-between;}
 .nback{display:flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);transition:color .2s;}
 .nback:hover{color:var(--blue);}
 .nback svg{width:16px;height:16px;}
 .nlogo{font-family:var(--serif);font-size:1.4rem;color:var(--navy);letter-spacing:.05em;}
-.nwa-btn{background:var(--navy);border:none;color:var(--white);padding:.4rem 1.1rem;border-radius:var(--r);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;transition:var(--t);cursor:pointer;}
+.nwa-btn{background:var(--navy);color:var(--white);padding:.4rem 1.1rem;border-radius:var(--r);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;transition:var(--t);}
 .nwa-btn:hover{background:var(--navy-d);}
+
+/* LAYOUT */
 main{padding-top:110px;min-height:100vh;}
 .bc{max-width:1200px;margin:0 auto;padding:1.5rem 5vw .5rem;font-size:.78rem;color:var(--g3);display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;}
 .bc a{color:var(--blue);transition:color .2s;}
 .bc a:hover{color:var(--navy);}
 .prod-wrap{max-width:1200px;margin:0 auto;padding:1rem 5vw 5rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+
+/* GALLERY */
 .galeria{position:sticky;top:120px;}
-.main-foto{aspect-ratio:3/4;border-radius:var(--r-lg);overflow:hidden;background:var(--g1);position:relative;}
-.main-foto img{width:100%;height:100%;object-fit:cover;display:block;}
-.thumb-row{display:flex;gap:.6rem;margin-top:.85rem;flex-wrap:wrap;}
-.thumb{width:72px;aspect-ratio:1;border-radius:var(--r-md);overflow:hidden;cursor:pointer;border:2px solid transparent;transition:border-color .2s;flex-shrink:0;}
+.main-foto{aspect-ratio:3/4;border-radius:var(--r-lg);overflow:hidden;background:var(--g1);position:relative;cursor:grab;}
+.main-foto img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .3s ease;}
+.thumb-row{display:flex;gap:.5rem;margin-top:.85rem;flex-wrap:wrap;}
+.thumb{width:68px;aspect-ratio:1;border-radius:var(--r-md);overflow:hidden;cursor:pointer;border:2px solid transparent;transition:border-color .2s,transform .15s;flex-shrink:0;}
+.thumb:hover{transform:scale(1.05);}
 .thumb.on{border-color:var(--navy);}
 .thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+
+/* PRODUCT INFO */
 .infos{padding-top:.5rem;}
 .badge{display:inline-block;background:var(--navy);color:var(--white);font-size:.65rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;padding:.28rem .8rem;border-radius:var(--r);margin-bottom:1rem;}
-.badge.rose{background:var(--rose);}
 .prod-nome{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--navy);line-height:1.1;margin-bottom:.4rem;}
 .prod-ref{font-size:.75rem;color:var(--g3);letter-spacing:.1em;margin-bottom:1.5rem;}
 .prod-preco{font-family:var(--serif);font-size:2.2rem;color:var(--navy);font-weight:500;margin-bottom:.3rem;}
-.prod-preco-sub{font-size:.82rem;color:var(--g3);margin-bottom:1.5rem;}
+.prod-preco-sub{font-size:.82rem;color:var(--g3);margin-bottom:.4rem;}
+.frete-badge{font-size:.82rem;color:var(--navy);font-weight:500;margin-bottom:1.5rem;display:block;}
 .divider{width:40px;height:1px;background:var(--blue);margin:1.2rem 0;}
 .prod-desc{font-size:.95rem;color:var(--g4);line-height:1.85;margin-bottom:1.5rem;}
-.prod-destaque{background:var(--sky-lt);border-left:3px solid var(--blue);padding:.85rem 1rem;border-radius:0 var(--r-md) var(--r-md) 0;font-size:.88rem;color:var(--navy);font-style:italic;margin-bottom:1.5rem;}
-.cor-label{font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin-bottom:.65rem;}
-.cor-box{display:flex;align-items:center;gap:.6rem;margin-bottom:2rem;flex-wrap:wrap;}
-.cor-item{display:flex;align-items:center;gap:.4rem;cursor:pointer;}
-.cor-swatch{width:22px;height:22px;border-radius:50%;border:2px solid transparent;box-shadow:0 0 0 1px var(--g2);transition:box-shadow .2s;}
-.cor-swatch.on{box-shadow:0 0 0 2px var(--navy);}
-.cor-nome{font-size:.82rem;color:var(--g4);}
+.prod-destaque{background:var(--sky-lt);border-left:3px solid var(--blue);padding:.85rem 1rem;border-radius:0 var(--r-md) var(--r-md) 0;font-size:.88rem;color:var(--navy);font-style:italic;margin-bottom:1.75rem;}
+
+/* COLOR SELECTOR */
+.cor-label{font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin-bottom:.5rem;}
+.cor-ativa-nome{font-size:.88rem;color:var(--g4);margin-bottom:.85rem;min-height:1.2em;}
+.cor-ativa-nome strong{color:var(--navy);font-weight:500;}
+.cor-box{display:flex;align-items:flex-start;gap:.75rem;margin-bottom:2rem;flex-wrap:wrap;}
+.cor-item{display:flex;flex-direction:column;align-items:center;gap:.35rem;cursor:pointer;padding:.4rem;border-radius:var(--r-md);transition:background .2s;-webkit-tap-highlight-color:transparent;}
+.cor-item:hover{background:var(--g1);}
+.cor-swatch{width:32px;height:32px;border-radius:50%;border:2.5px solid transparent;box-shadow:0 0 0 1.5px var(--g2);transition:box-shadow .2s,transform .15s;}
+.cor-item:hover .cor-swatch{transform:scale(1.08);}
+.cor-item.on .cor-swatch{box-shadow:0 0 0 2.5px var(--navy);border-color:var(--white);}
+.cor-item-nome{font-size:.7rem;color:var(--g4);letter-spacing:.04em;transition:color .2s;}
+.cor-item.on .cor-item-nome{color:var(--navy);font-weight:500;}
+
+/* BENEFITS */
 .beneficios{margin-bottom:2rem;}
 .ben-titulo{font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin-bottom:.75rem;}
 .ben-lista{list-style:none;display:flex;flex-direction:column;gap:.5rem;}
 .ben-lista li{font-size:.88rem;color:var(--g4);padding-left:1.2rem;position:relative;}
 .ben-lista li::before{content:'✓';position:absolute;left:0;color:var(--blue);font-size:.8rem;}
-.bwa-full{display:flex;align-items:center;justify-content:center;gap:.6rem;width:100%;padding:1rem;background:var(--wa);color:var(--white);border-radius:var(--r);font-size:.85rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:var(--t);margin-bottom:.85rem;cursor:pointer;}
+
+/* CTA */
+.bwa-full{display:flex;align-items:center;justify-content:center;gap:.6rem;width:100%;padding:1rem;background:var(--wa);color:var(--white);border-radius:var(--r);font-size:.85rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:var(--t);margin-bottom:.85rem;}
 .bwa-full:hover{background:#1ea855;transform:translateY(-1px);box-shadow:0 6px 24px rgba(37,211,102,.35);}
 .bcatalogo{display:flex;align-items:center;justify-content:center;width:100%;padding:.9rem;border:1px solid var(--navy);color:var(--navy);border-radius:var(--r);font-size:.82rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:var(--t);}
 .bcatalogo:hover{background:var(--navy);color:var(--white);}
-.rel-section{max-width:1200px;margin:0 auto;padding:3rem 5vw 5rem;}
+
+/* RELATED */
+.rel-section{background:var(--off);padding:3rem 5vw 5rem;}
+.rel-inner{max-width:1200px;margin:0 auto;}
 .rel-titulo{font-family:var(--serif);font-size:1.6rem;color:var(--navy);margin-bottom:.3rem;}
 .rel-sub{font-size:.85rem;color:var(--g3);margin-bottom:2rem;}
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
-.rel-card{border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--g1);transition:var(--t);text-decoration:none;}
+.rel-card{border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--g1);transition:var(--t);background:var(--white);}
 .rel-card:hover{transform:translateY(-4px);box-shadow:var(--sh-lg);}
 .rel-img{aspect-ratio:3/4;background:var(--g1);overflow:hidden;}
 .rel-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s;}
@@ -85,32 +113,39 @@ main{padding-top:110px;min-height:100vh;}
 .rel-info{padding:1rem;}
 .rel-nome{font-family:var(--serif);font-size:1rem;color:var(--navy);margin-bottom:.2rem;}
 .rel-preco{font-size:.85rem;color:var(--blue);font-weight:500;}
-footer{background:var(--navy);color:var(--white);text-align:center;padding:2rem 5vw;font-size:.8rem;opacity:.85;}
+
+/* FOOTER */
+footer{background:var(--navy-d,#072B50);color:var(--white);text-align:center;padding:2rem 5vw;font-size:.8rem;}
+
+/* RESPONSIVE */
 @media(max-width:768px){
   main{padding-top:100px;}
   .prod-wrap{grid-template-columns:1fr;gap:2rem;}
   .galeria{position:static;}
-  .thumb{width:60px;}
+  .thumb{width:58px;}
   .rel-grid{grid-template-columns:repeat(2,1fr);gap:1rem;}
+  .cor-swatch{width:28px;height:28px;}
 }
 @media(max-width:480px){
   .prod-wrap{padding:1rem 4vw 4rem;}
   .prod-nome{font-size:1.6rem;}
+  .rel-grid{grid-template-columns:repeat(2,1fr);}
+  .thumb{width:52px;}
 }
 </style>
 </head>
 <body>
 
-<div class="ann">❤️ <strong>Frete grátis · Curitiba e região</strong> — Coleção Dia dos Namorados · Shopping Cidade &amp; Palladium</div>
+<div class="ann">🚚 <strong>Frete grátis · Curitiba e região</strong> — Coleção Dia dos Namorados · Shopping Cidade &amp; Palladium</div>
 
 <header id="hdr">
   <div class="ni">
     <a href="index.html" class="nback">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
       Voltar
     </a>
-    <a href="index.html" class="nlogo">ZEIN Bolsas</a>
-    <a href="https://wa.me/5541998114832" class="nwa-btn">WhatsApp</a>
+    <a href="index.html" class="nlogo">ZEIN</a>
+    <a href="https://wa.me/5541998114832" target="_blank" class="nwa-btn">WhatsApp</a>
   </div>
 </header>
 
@@ -118,164 +153,309 @@ footer{background:var(--navy);color:var(--white);text-align:center;padding:2rem 
   <nav class="bc">
     <a href="index.html">Início</a>
     <span>›</span>
-    <a href="index.html#colecao">Coleção Dia dos Namorados</a>
+    <a href="index.html#catalogo">Catálogo</a>
     <span>›</span>
     <span>Bolsa Toscana</span>
   </nav>
 
   <div class="prod-wrap">
+
+    <!-- GALERIA -->
     <div class="galeria">
       <div class="main-foto">
-        <img id="foto-main" src="Coleção dia dos namorados/berem5branca.jpg" alt="Bolsa Toscana">
+        <img id="foto-main" src="produtos/toscana-bz005/berem5branca.jpg" alt="Bolsa Toscana — Branca">
       </div>
       <div class="thumb-row">
-        <div class="thumb on" onclick="trocarFoto(0,this)">
-          <img src="Coleção dia dos namorados/berem5branca.jpg" alt="Branca">
+        <!-- cores (índices 0–4) -->
+        <div class="thumb on" onclick="trocarFoto(0,this)" title="Branca">
+          <img src="produtos/toscana-bz005/berem5branca.jpg" alt="Branca">
         </div>
-        <div class="thumb" onclick="trocarFoto(1,this)">
-          <img src="Coleção dia dos namorados/berem5preta.jpg" alt="Preta">
+        <div class="thumb" onclick="trocarFoto(1,this)" title="Café">
+          <img src="produtos/toscana-bz005/berem5café.jpg" alt="Café">
         </div>
-        <div class="thumb" onclick="trocarFoto(2,this)">
-          <img src="Coleção dia dos namorados/berem5café.jpg" alt="Café">
+        <div class="thumb" onclick="trocarFoto(2,this)" title="Khaki">
+          <img src="produtos/toscana-bz005/berem5khaki.jpg" alt="Khaki">
         </div>
-        <div class="thumb" onclick="trocarFoto(3,this)">
-          <img src="Coleção dia dos namorados/berem5dentro.jpg" alt="Interior">
+        <div class="thumb" onclick="trocarFoto(3,this)" title="Marrom">
+          <img src="produtos/toscana-bz005/berem5marrom.jpg" alt="Marrom">
+        </div>
+        <div class="thumb" onclick="trocarFoto(4,this)" title="Preta">
+          <img src="produtos/toscana-bz005/berem5preta.jpg" alt="Preta">
+        </div>
+        <!-- extras (índices 5–6) -->
+        <div class="thumb" onclick="trocarFoto(5,this)" title="Interior">
+          <img src="produtos/toscana-bz005/berem5dentro.jpg" alt="Interior">
+        </div>
+        <div class="thumb" onclick="trocarFoto(6,this)" title="Usando">
+          <img src="produtos/toscana-bz005/berem5usando.jpg" alt="Modelo usando">
         </div>
       </div>
     </div>
 
+    <!-- INFOS -->
     <div class="infos">
       <span class="badge">Edição Especial</span>
       <h1 class="prod-nome">Bolsa Toscana</h1>
-      <p class="prod-ref">REF: BZ-005 — Coleção Dia dos Namorados</p>
-      <p class="prod-preco">R$ 149,90</p>
-      <p class="prod-preco-sub">À vista no PIX ou cartão</p>
+      <p class="prod-ref">Ref. BZ-005 · Coleção Dia dos Namorados 2026</p>
+      <div class="prod-preco">R$ 149,90</div>
+      <p class="prod-preco-sub">Consulte formas de pagamento via WhatsApp</p>
+      <span class="frete-badge">🚚 Frete grátis · Curitiba e região</span>
 
       <div class="divider"></div>
 
-      <p class="prod-desc">Inspirada nas colinas douradas da Toscana, esta bolsa carrega em cada costura a leveza e romantismo da paisagem italiana. Com 3 cores exclusivas — Branco, Preto e Café — ela se adapta a cada estilo com graça natural. Vista por uma modelo real, a Toscana prova que beleza e funcionalidade caminham juntas. O presente mais completo da coleção. Confeccionada em material externo 100% PU de alta durabilidade, com forro interno em tecido macio e acabamento caprichado.</p>
+      <p class="prod-desc">Inspirada nas colinas douradas da Toscana, esta bolsa carrega em cada costura a leveza e o romantismo da paisagem italiana. Disponível em 5 cores exclusivas — Branca, Café, Khaki, Marrom e Preta — ela se adapta a cada estilo com graça natural. Confeccionada em material externo 100% PU de alta durabilidade, com forro interno em tecido macio e acabamento caprichado.</p>
 
-      <div class="prod-destaque">3 cores exclusivas — Branco, Preto e Café. A mais versátil da coleção.</div>
+      <div class="prod-destaque">5 cores exclusivas — a bolsa que combina com qualquer ocasião e estilo.</div>
 
+      <!-- SELETOR DE CORES -->
       <p class="cor-label">Cores disponíveis</p>
+      <p class="cor-ativa-nome">Cor selecionada: <strong id="cor-ativa">Branca</strong></p>
       <div class="cor-box">
-        <div class="cor-item" onclick="pickCor(0)" style="cursor:pointer;">>
-          <div class="cor-swatch on" style="background:#F0ECE4;"></div>
-          <span class="cor-nome">Branco</span>
+        <div class="cor-item on" onclick="pickCor(0,this)" title="Branca">
+          <div class="cor-swatch" style="background:#F0ECE4;box-shadow:0 0 0 1.5px #ccc;"></div>
+          <span class="cor-item-nome">Branca</span>
         </div>
-        <div class="cor-item" onclick="pickCor(1)" style="cursor:pointer;">>
-          <div class="cor-swatch" style="background:#1C1C1C;"></div>
-          <span class="cor-nome">Preto</span>
+        <div class="cor-item" onclick="pickCor(1,this)" title="Café">
+          <div class="cor-swatch" style="background:#5C3317;"></div>
+          <span class="cor-item-nome">Café</span>
         </div>
-        <div class="cor-item" onclick="pickCor(2)" style="cursor:pointer;">>
+        <div class="cor-item" onclick="pickCor(2,this)" title="Khaki">
+          <div class="cor-swatch" style="background:#8B7D5E;"></div>
+          <span class="cor-item-nome">Khaki</span>
+        </div>
+        <div class="cor-item" onclick="pickCor(3,this)" title="Marrom">
           <div class="cor-swatch" style="background:#6B4226;"></div>
-          <span class="cor-nome">Café</span>
+          <span class="cor-item-nome">Marrom</span>
+        </div>
+        <div class="cor-item" onclick="pickCor(4,this)" title="Preta">
+          <div class="cor-swatch" style="background:#1C1C1C;"></div>
+          <span class="cor-item-nome">Preta</span>
         </div>
       </div>
 
       <div class="beneficios">
         <p class="ben-titulo">Por que você vai amar</p>
         <ul class="ben-lista">
-          <li>Disponível em 3 cores exclusivas</li>
-          <li>Interior amplo e organizado</li><li>Forro interno em tecido macio e caprichado</li>
+          <li>Disponível em 5 cores exclusivas</li>
+          <li>Interior amplo e organizado</li>
+          <li>Forro interno em tecido macio e caprichado</li>
           <li>Alça regulável e removível</li>
           <li>Material externo 100% PU de alta durabilidade</li>
+          <li>Frete grátis para Curitiba e região</li>
           <li>Embalagem especial para presente</li>
         </ul>
       </div>
 
-      <a href="https://wa.me/5541998114832?text=Olá!%20Tenho%20interesse%20na%20Bolsa%20Toscana%20que%20vi%20na%20coleção%20especial%20de%20Dia%20dos%20Namorados%20da%20Bolsas%20Zein." class="bwa-full">
+      <a href="https://wa.me/5541998114832?text=Olá!%20Tenho%20interesse%20na%20Bolsa%20Toscana%20que%20vi%20no%20site%20da%20ZEIN%20Bolsas.%20Pode%20me%20ajudar?" target="_blank" class="bwa-full">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.107 1.51 5.833L.057 23.215a.75.75 0 00.918.919l5.453-1.429A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.518-5.188-1.42l-.372-.22-3.862 1.013 1.04-3.771-.242-.389A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-        Pedir pelo WhatsApp
+        Consultar via WhatsApp
       </a>
-      <a href="index.html#colecao" class="bcatalogo">Ver catálogo completo</a>
+      <a href="index.html#catalogo" class="bcatalogo">← Ver toda a coleção</a>
     </div>
   </div>
+</main>
 
-  <section class="rel-section">
-    <h2 class="rel-titulo">Você também pode gostar</h2>
-    <p class="rel-sub">Mais peças da Coleção Dia dos Namorados</p>
+<div style="background:var(--off,#F7F9FC);">
+<div class="rel-section">
+  <div class="rel-inner">
+    <h2 class="rel-titulo">Você também vai amar</h2>
+    <p class="rel-sub">Outros modelos da Coleção Dia dos Namorados</p>
     <div class="rel-grid">
+      <a href="bolsa-verona.html" class="rel-card">
+        <div class="rel-img"><img src="produtos/verona-bz001/berem1- bege.jpg" alt="Bolsa Verona" loading="lazy"></div>
+        <div class="rel-info"><div class="rel-nome">Bolsa Verona</div><div class="rel-preco">R$ 179,90</div></div>
+      </a>
       <a href="bolsa-firenze.html" class="rel-card">
-        <div class="rel-img">
-          <img src="Coleção dia dos namorados/berem3off.jpg" alt="Bolsa Firenze" loading="lazy">
-        </div>
-        <div class="rel-info">
-          <p class="rel-nome">Bolsa Firenze</p>
-          <p class="rel-preco">R$ 199,90</p>
-        </div>
+        <div class="rel-img"><img src="produtos/firenze-bz003/berem3off.jpg" alt="Bolsa Firenze" loading="lazy"></div>
+        <div class="rel-info"><div class="rel-nome">Bolsa Firenze</div><div class="rel-preco">R$ 199,90</div></div>
       </a>
-      <a href="bolsa-milano.html" class="rel-card">
-        <div class="rel-img">
-          <img src="Coleção dia dos namorados/berem4preta.jpg" alt="Bolsa Milano" loading="lazy">
-        </div>
-        <div class="rel-info">
-          <p class="rel-nome">Bolsa Milano</p>
-          <p class="rel-preco">R$ 199,90</p>
-        </div>
-      </a>
-      <a href="bag-dante.html" class="rel-card">
-        <div class="rel-img">
-          <img src="Coleção dia dos namorados/bag1preta.jpg" alt="Bag Dante" loading="lazy">
-        </div>
-        <div class="rel-info">
-          <p class="rel-nome">Bag Dante</p>
-          <p class="rel-preco">R$ 129,90</p>
-        </div>
+      <a href="bolsa-capri.html" class="rel-card">
+        <div class="rel-img"><img src="produtos/capri-bz006/berem6bege.jpg" alt="Bolsa Capri" loading="lazy"></div>
+        <div class="rel-info"><div class="rel-nome">Bolsa Capri</div><div class="rel-preco">R$ 149,90</div></div>
       </a>
     </div>
-  </section>
-</main>
+  </div>
+</div>
+</div>
 
 <footer>© 2025 ZEIN Bolsas · CNPJ 22.797.655/0001-75 · Curitiba — PR<br><span style="font-size:.72rem;opacity:.6;display:inline-flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-top:.4rem;"><a href="sobre.html" style="color:inherit;">Sobre Nós</a> · <a href="politica-troca.html" style="color:inherit;">Política de Troca</a> · <a href="politica-privacidade.html" style="color:inherit;">Privacidade</a></span></footer>
 
 <script>
-const fotos=[
-  'Coleção dia dos namorados/berem5branca.jpg',
-  'Coleção dia dos namorados/berem5preta.jpg',
-  'Coleção dia dos namorados/berem5café.jpg',
-  'Coleção dia dos namorados/berem5dentro.jpg'
+// ── Mapeamento de cores (índice 0–4 = cores; 5–6 = extras) ──────────────
+const cores = [
+  { nome: 'Branca', src: 'produtos/toscana-bz005/berem5branca.jpg' },
+  { nome: 'Café',   src: 'produtos/toscana-bz005/berem5café.jpg'  },
+  { nome: 'Khaki',  src: 'produtos/toscana-bz005/berem5khaki.jpg' },
+  { nome: 'Marrom', src: 'produtos/toscana-bz005/berem5marrom.jpg'},
+  { nome: 'Preta',  src: 'produtos/toscana-bz005/berem5preta.jpg' },
+];
+const fotos = [
+  'produtos/toscana-bz005/berem5branca.jpg',
+  'produtos/toscana-bz005/berem5café.jpg',
+  'produtos/toscana-bz005/berem5khaki.jpg',
+  'produtos/toscana-bz005/berem5marrom.jpg',
+  'produtos/toscana-bz005/berem5preta.jpg',
+  'produtos/toscana-bz005/berem5dentro.jpg',
+  'produtos/toscana-bz005/berem5usando.jpg',
 ];
 
-function pickCor(idx){
-  const thumbs=document.querySelectorAll('.thumb');
-  if(thumbs[idx]) trocarFoto(idx,thumbs[idx]);
-  document.querySelectorAll('.cor-swatch').forEach((s,i)=>s.classList.toggle('on',i===idx));
-}
-function trocarFoto(idx,el){
-  document.getElementById('foto-main').src=fotos[idx];
-  document.querySelectorAll('.thumb').forEach(t=>t.classList.remove('on'));
+// Troca a foto principal e marca o thumb ativo
+function trocarFoto(idx, el) {
+  document.getElementById('foto-main').src = fotos[idx];
+  document.getElementById('foto-main').alt = el.title || 'Bolsa Toscana';
+  document.querySelectorAll('.thumb').forEach(t => t.classList.remove('on'));
   el.classList.add('on');
+  // Se for uma cor (índice 0–4), sincroniza o seletor
+  if (idx < cores.length) sincronizarCor(idx);
 }
-function ajustarTopBar(){
-  const ann=document.querySelector('.ann');
-  const hdr=document.getElementById('hdr');
-  if(ann&&hdr)hdr.style.top=ann.offsetHeight+'px';
+
+// Seleciona uma cor: atualiza swatch, nome e foto
+function pickCor(idx, el) {
+  // Atualiza swatches
+  document.querySelectorAll('.cor-item').forEach(c => c.classList.remove('on'));
+  el.classList.add('on');
+  // Atualiza nome exibido
+  document.getElementById('cor-ativa').textContent = cores[idx].nome;
+  // Troca foto e thumb
+  const thumbs = document.querySelectorAll('.thumb');
+  if (thumbs[idx]) trocarFoto(idx, thumbs[idx]);
+}
+
+// Sincroniza o seletor de cor quando o usuário navega pelas miniaturas
+function sincronizarCor(idx) {
+  document.querySelectorAll('.cor-item').forEach((c, i) => c.classList.toggle('on', i === idx));
+  if (idx < cores.length) {
+    document.getElementById('cor-ativa').textContent = cores[idx].nome;
+  }
+}
+
+// Header scroll
+function ajustarTopBar() {
+  const ann = document.querySelector('.ann');
+  const hdr = document.getElementById('hdr');
+  if (ann && hdr) hdr.style.top = ann.offsetHeight + 'px';
 }
 ajustarTopBar();
-window.addEventListener('resize',ajustarTopBar);
-window.addEventListener('scroll',()=>{
-  const annH=document.querySelector('.ann')?.offsetHeight||36;
-  document.getElementById('hdr').classList.toggle('sc',window.scrollY>annH+20);
+window.addEventListener('resize', ajustarTopBar);
+window.addEventListener('scroll', () => {
+  const annH = document.querySelector('.ann')?.offsetHeight || 36;
+  document.getElementById('hdr').classList.toggle('sc', window.scrollY > annH + 20);
 });
 
 /* SWIPE na galeria principal */
 (function(){
-  var mf=document.querySelector('.main-foto');
-  if(!mf)return;
-  var sx=0,sy=0;
-  mf.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;sy=e.touches[0].clientY;},{passive:true});
-  mf.addEventListener('touchend',function(e){
-    var dx=sx-e.changedTouches[0].clientX;
-    var dy=sy-e.changedTouches[0].clientY;
-    if(Math.abs(dx)>Math.abs(dy)&&Math.abs(dx)>45){
-      var thumbs=Array.from(document.querySelectorAll('.thumb'));
-      var cur=thumbs.findIndex(function(t){return t.classList.contains('on');});
-      var next=dx>0?Math.min(cur+1,thumbs.length-1):Math.max(cur-1,0);
-      if(next!==cur)trocarFoto(next,thumbs[next]);
+  var mf = document.querySelector('.main-foto');
+  if (!mf) return;
+  var sx = 0, sy = 0;
+  mf.addEventListener('touchstart', function(e){ sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+  mf.addEventListener('touchend', function(e){
+    var dx = sx - e.changedTouches[0].clientX;
+    var dy = sy - e.changedTouches[0].clientY;
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 45) {
+      var thumbs = Array.from(document.querySelectorAll('.thumb'));
+      var cur = thumbs.findIndex(function(t){ return t.classList.contains('on'); });
+      var next = dx > 0 ? Math.min(cur + 1, thumbs.length - 1) : Math.max(cur - 1, 0);
+      if (next !== cur) trocarFoto(next, thumbs[next]);
     }
-    sx=0;sy=0;
-  },{passive:true});
+    sx = 0; sy = 0;
+  }, { passive: true });
+})();
+</script>
+</body>
+</html>
+
+      <a href="bolsa-capri.html" class="rel-card">
+        <div class="rel-img"><img src="produtos/capri-bz006/berem6bege.jpg" alt="Bolsa Capri" loading="lazy"></div>
+        <div class="rel-info"><div class="rel-nome">Bolsa Capri</div><div class="rel-preco">R$ 149,90</div></div>
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+
+<footer>© 2025 ZEIN Bolsas · CNPJ 22.797.655/0001-75 · Curitiba — PR<br><span style="font-size:.72rem;opacity:.6;display:inline-flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-top:.4rem;"><a href="sobre.html" style="color:inherit;">Sobre Nós</a> · <a href="politica-troca.html" style="color:inherit;">Política de Troca</a> · <a href="politica-privacidade.html" style="color:inherit;">Privacidade</a></span></footer>
+
+<script>
+const cores = [
+  { nome: 'Branca', src: 'produtos/toscana-bz005/berem5branca.jpg' },
+  { nome: 'Café',   src: 'produtos/toscana-bz005/berem5café.jpg'  },
+  { nome: 'Khaki',  src: 'produtos/toscana-bz005/berem5khaki.jpg' },
+  { nome: 'Marrom', src: 'produtos/toscana-bz005/berem5marrom.jpg'},
+  { nome: 'Preta',  src: 'produtos/toscana-bz005/berem5preta.jpg' },
+];
+const fotos = [
+  'produtos/toscana-bz005/berem5branca.jpg',
+  'produtos/toscana-bz005/berem5café.jpg',
+  'produtos/toscana-bz005/berem5khaki.jpg',
+  'produtos/toscana-bz005/berem5marrom.jpg',
+  'produtos/toscana-bz005/berem5preta.jpg',
+  'produtos/toscana-bz005/berem5dentro.jpg',
+  'produtos/toscana-bz005/berem5usando.jpg',
+];
+
+function trocarFoto(idx, el) {
+  var img = document.getElementById('foto-main');
+  img.src = fotos[idx];
+  img.alt = el.title || 'Bolsa Toscana';
+  document.querySelectorAll('.thumb').forEach(function(t){ t.classList.remove('on'); });
+  el.classList.add('on');
+  if (idx < cores.length) sincronizarCor(idx);
+}
+
+function pickCor(idx, el) {
+  document.querySelectorAll('.cor-item').forEach(function(c){ c.classList.remove('on'); });
+  el.classList.add('on');
+  document.getElementById('cor-ativa').textContent = cores[idx].nome;
+  var thumbs = document.querySelectorAll('.thumb');
+  if (thumbs[idx]) trocarFoto(idx, thumbs[idx]);
+}
+
+function sincronizarCor(idx) {
+  document.querySelectorAll('.cor-item').forEach(function(c, i){ c.classList.toggle('on', i === idx); });
+  if (idx < cores.length) document.getElementById('cor-ativa').textContent = cores[idx].nome;
+}
+
+function ajustarTopBar() {
+  var ann = document.querySelector('.ann');
+  var hdr = document.getElementById('hdr');
+  if (ann && hdr) hdr.style.top = ann.offsetHeight + 'px';
+}
+ajustarTopBar();
+window.addEventListener('resize', ajustarTopBar);
+window.addEventListener('scroll', function(){
+  var annH = (document.querySelector('.ann') || {}).offsetHeight || 36;
+  document.getElementById('hdr').classList.toggle('sc', window.scrollY > annH + 20);
+});
+
+(function(){
+  var mf = document.querySelector('.main-foto');
+  if (!mf) return;
+  var sx = 0, sy = 0;
+  mf.addEventListener('touchstart', function(e){ sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+  mf.addEventListener('touchend', function(e){
+    var dx = sx - e.changedTouches[0].clientX;
+    var dy = sy - e.changedTouches[0].clientY;
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 45) {
+      var thumbs = Array.from(document.querySelectorAll('.thumb'));
+      var cur = thumbs.findIndex(function(t){ return t.classList.contains('on'); });
+      var next = dx > 0 ? Math.min(cur + 1, thumbs.length - 1) : Math.max(cur - 1, 0);
+      if (next !== cur) trocarFoto(next, thumbs[next]);
+    }
+    sx = 0; sy = 0;
+  }, { passive: true });
+})();
+</script>
+</body>
+</html>
+sy - e.changedTouches[0].clientY;
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 45) {
+      var thumbs = Array.from(document.querySelectorAll('.thumb'));
+      var cur = thumbs.findIndex(function(t){ return t.classList.contains('on'); });
+      var next = dx > 0 ? Math.min(cur + 1, thumbs.length - 1) : Math.max(cur - 1, 0);
+      if (next !== cur) trocarFoto(next, thumbs[next]);
+    }
+    sx = 0; sy = 0;
+  }, { passive: true });
 })();
 </script>
 </body>
