@@ -534,7 +534,7 @@ footer{background:var(--navy-d);color:var(--white);padding:4rem 5vw 2rem;}
     </div>
     <div class="wsteps">
       <div class="wst"><span class="wn">1</span><div><div class="wt">Escolha sua bolsa favorita</div><div class="wd">Navegue pelo catálogo, selecione o modelo e a cor.</div></div></div>
-      <div class="wst"><span class="wn">2</span><div><div class="wt">Clique em "Consultar disponibilidade"</div><div class="wd">Mensagem automática com todos os detalhes da peça.</div></div></div>
+      <div class="wst"><span class="wn">2</span><div><div class="wt">Clique em "Comprar pelo WhatsApp"</div><div class="wd">Mensagem automática com todos os detalhes da peça.</div></div></div>
       <div class="wst"><span class="wn">3</span><div><div class="wt">Nossa consultora confirma tudo</div><div class="wd">Estoque, cores, tamanhos e formas de pagamento.</div></div></div>
       <div class="wst"><span class="wn">4</span><div><div class="wt">Retire na loja ou combine entrega</div><div class="wd">Shopping Cidade, Palladium ou combine com a equipe.</div></div></div>
     </div>
@@ -617,7 +617,7 @@ footer{background:var(--navy-d);color:var(--white);padding:4rem 5vw 2rem;}
     <div class="dv c"></div>
   </div>
   <ul class="fql">
-    <li class="fq rv" onclick="toggleFaq(this)"><button class="fqq">Como funciona a compra pelo WhatsApp?<span class="fqa2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg></span></button><div class="fqan"><p>Simples! Escolha a bolsa desejada, clique em "Consultar disponibilidade" e você será redirecionada para o WhatsApp com uma mensagem já pronta. Nossa consultora responde em breve confirmando estoque, cores e pagamento.</p></div></li>
+    <li class="fq rv" onclick="toggleFaq(this)"><button class="fqq">Como funciona a compra pelo WhatsApp?<span class="fqa2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg></span></button><div class="fqan"><p>Simples! Escolha a bolsa desejada, clique em "Comprar pelo WhatsApp" e você será redirecionada para o WhatsApp com uma mensagem já pronta. Nossa consultora responde em breve confirmando estoque, cores e pagamento.</p></div></li>
     <li class="fq rv" onclick="toggleFaq(this)"><button class="fqq">Vocês fazem entrega em Curitiba?<span class="fqa2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg></span></button><div class="fqan"><p>Sim! Combinamos a entrega diretamente pelo WhatsApp. Atendemos Curitiba e região metropolitana. Para outras cidades, consulte disponibilidade com nossa equipe.</p></div></li>
     <li class="fq rv" onclick="toggleFaq(this)"><button class="fqq">Quais formas de pagamento vocês aceitam?<span class="fqa2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg></span></button><div class="fqan"><p>Aceitamos PIX, cartão de crédito e débito (em loja física). Parcelamos em até 6× no cartão. Consulte as condições com nossa consultora pelo WhatsApp: (41) 99811-4832.</p></div></li>
     <li class="fq rv" onclick="toggleFaq(this)"><button class="fqq">Posso fazer troca?<span class="fqa2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg></span></button><div class="fqan"><p>Trocas são realizadas nas lojas físicas (Shopping Cidade ou Palladium) em até 30 dias, com nota fiscal e produto em perfeito estado. Entre em contato pelo WhatsApp para mais detalhes.</p></div></li>
@@ -736,7 +736,7 @@ function pcHTML(p){
   return`<div class="pc" data-cat="${p.cat}"><div class="pci" style="position:relative;">${fotoHTML}${bd}<div class="pw"><svg viewBox="0 0 24 24" fill="none" stroke="#0B3A69" stroke-width="1.5" style="width:15px;height:15px"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>${p.pagina
   ? `<a href="${p.pagina}" class="pq" style="display:block;">Ver detalhes</a>`
   : `<div class="pq" onclick="openModal('${p.name}','${p.id}','${p.desc.replace(/'/g,"\\'")}','${p.price}',${JSON.stringify(p.colors)},${JSON.stringify(p.cn)});event.stopPropagation()">Ver detalhes</div>`
-}</div><div class="pin"><div class="pnm">${p.name}</div><div class="psk">Ref. ${p.id}</div><div class="ppr">${p.price} <span>· Consulte condições</span></div><div class="cd" id="dots-${sid}">${dots}<span class="clb" id="cl-${sid}"> ${p.cn[0]}</span></div><button class="bwa bwaf" onclick="openWA('${p.name}','${p.id}',selC['${p.id}'],'Catálogo')">${waIco} Consultar disponibilidade</button></div></div>`;
+}</div><div class="pin"><div class="pnm">${p.name}</div><div class="psk">Ref. ${p.id}</div><div class="ppr">${p.price} <span>· Consulte condições</span></div><div class="cd" id="dots-${sid}">${dots}<span class="clb" id="cl-${sid}"> ${p.cn[0]}</span></div><button class="bwa bwaf" onclick="openWA('${p.name}','${p.id}',selC['${p.id}'],'Catálogo')">${waIco} Comprar pelo WhatsApp</button></div></div>`;
 }
 
 function pickC(pid,idx,el,e){
@@ -761,7 +761,7 @@ function renderBS(){
     const img=p.imagens&&p.imagens[0]?`<img src="${p.imagens[0]}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;display:block;">`:`<div class="ph" style="height:100%"></div>`;
     const link=p.pagina?`href="${p.pagina}"`:'';
     const tag=p.pagina?'a':'div';
-    return`<${tag} class="bsc" ${link} style="text-decoration:none;color:inherit;"><div class="pci" style="aspect-ratio:3/4;position:relative;overflow:hidden;border-radius:var(--r-lg);">${img}<span class="brk">#${p.rank}</span></div><div class="pin"><div class="pnm">${p.name}</div><div class="ppr">${p.price}</div><button class="bwa bwaf" onclick="openWA('${p.name}','${p.id}','${p.cn[0]}','Mais Vendidas');event.preventDefault();">${waIco} Consultar</button></div></${tag}>`;
+    return`<${tag} class="bsc" ${link} style="text-decoration:none;color:inherit;"><div class="pci" style="aspect-ratio:3/4;position:relative;overflow:hidden;border-radius:var(--r-lg);">${img}<span class="brk">#${p.rank}</span></div><div class="pin"><div class="pnm">${p.name}</div><div class="ppr">${p.price}</div><button class="bwa bwaf" onclick="openWA('${p.name}','${p.id}','${p.cn[0]}','Mais Vendidas');event.preventDefault();">${waIco} Comprar</button></div></${tag}>`;
   }).join('');
 }
 
